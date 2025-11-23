@@ -85,27 +85,54 @@ const Hero = () => {
           like React, Vue, and Next.js.
         </motion.p>
 
-        {/* CTA Buttons */}
+        {/* CTA Buttons - Trust-building colors with micro-interactions */}
         <motion.div
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 mb-16"
         >
+          {/* Primary CTA - Trust blue for professionalism */}
           <motion.button
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection('projects')}
-            className="px-8 py-4 bg-accent text-navy font-semibold rounded-lg hover:bg-accent-hover transition-all duration-200 shadow-lg hover:shadow-accent/50"
+            className="px-8 py-4 bg-trust text-white font-semibold rounded-lg hover:bg-trust-dark transition-all duration-300 shadow-lg hover:shadow-trust/50 group relative overflow-hidden"
           >
-            View My Work
+            <span className="relative z-10 flex items-center justify-center gap-2">
+              View My Work
+              <motion.span
+                initial={{ x: 0 }}
+                whileHover={{ x: 5 }}
+                className="inline-block"
+              >
+                →
+              </motion.span>
+            </span>
+            {/* Animated background on hover */}
+            <motion.div
+              className="absolute inset-0 bg-trust-light"
+              initial={{ x: '-100%' }}
+              whileHover={{ x: 0 }}
+              transition={{ duration: 0.3 }}
+            />
           </motion.button>
           
+          {/* Secondary CTA - Accent color for attention */}
           <motion.button
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection('contact')}
-            className="px-8 py-4 border-2 border-accent text-accent font-semibold rounded-lg hover:bg-accent/10 transition-all duration-200"
+            className="px-8 py-4 border-2 border-accent text-accent font-semibold rounded-lg hover:bg-accent hover:text-navy transition-all duration-300 group"
           >
-            Get In Touch
+            <span className="flex items-center justify-center gap-2">
+              Get In Touch
+              <motion.span
+                initial={{ rotate: 0 }}
+                whileHover={{ rotate: 15 }}
+                className="inline-block"
+              >
+                ✉
+              </motion.span>
+            </span>
           </motion.button>
         </motion.div>
 
@@ -129,8 +156,9 @@ const Hero = () => {
         </motion.div>
       </motion.div>
 
-      {/* Decorative Background Elements */}
+      {/* Decorative Background Elements - Trust-building gradients */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+        {/* Accent color gradient - top right */}
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
@@ -143,10 +171,12 @@ const Hero = () => {
           }}
           className="absolute top-1/4 -right-48 w-96 h-96 bg-accent rounded-full blur-3xl"
         />
+        
+        {/* Trust blue gradient - bottom left */}
         <motion.div
           animate={{
             scale: [1, 1.3, 1],
-            opacity: [0.05, 0.1, 0.05],
+            opacity: [0.08, 0.15, 0.08],
           }}
           transition={{
             duration: 10,
@@ -154,7 +184,22 @@ const Hero = () => {
             ease: 'easeInOut',
             delay: 1,
           }}
-          className="absolute -bottom-32 -left-48 w-96 h-96 bg-blue-500 rounded-full blur-3xl"
+          className="absolute -bottom-32 -left-48 w-96 h-96 bg-trust rounded-full blur-3xl"
+        />
+        
+        {/* Success green gradient - middle right (subtle) */}
+        <motion.div
+          animate={{
+            scale: [1, 1.15, 1],
+            opacity: [0.03, 0.06, 0.03],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: 'easeInOut',
+            delay: 2,
+          }}
+          className="absolute top-1/2 right-0 w-64 h-64 bg-success rounded-full blur-3xl"
         />
       </div>
     </section>
