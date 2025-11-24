@@ -53,7 +53,7 @@ const Hero = () => {
         {/* Greeting */}
         <motion.p
           variants={itemVariants}
-          className="text-light dark:text-accent-accent font-mono text-base md:text-lg mb-5"
+          className="text-light font-mono text-base md:text-lg mb-5"
         >
           Hi, my name is
         </motion.p>
@@ -61,7 +61,7 @@ const Hero = () => {
         {/* Name */}
         <motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold text-light dark:text-slate-lightest-text-primary mb-4"
+          className="text-5xl md:text-6xl lg:text-7xl font-bold text-light mb-4"
         >
           Aryan Surin.
         </motion.h1>
@@ -69,7 +69,7 @@ const Hero = () => {
         {/* Tagline */}
         <motion.h2
           variants={itemVariants}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-light dark:text-slate-text-secondary mb-6"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold text-light mb-6"
         >
           I build exceptional digital experiences.
         </motion.h2>
@@ -77,10 +77,10 @@ const Hero = () => {
         {/* Description */}
         <motion.p
           variants={itemVariants}
-          className="text-light dark:text-slate-text-secondary max-w-2xl text-base md:text-lg leading-relaxed mb-8"
+          className="text-light max-w-2xl text-base md:text-lg leading-relaxed mb-8"
         >
-          I'm a <span className="text-light dark:text-accent-accent font-semibold">Full Stack Developer</span> specializing 
-          in <span className="text-light dark:text-accent-accent font-semibold">Frontend Development</span>, with over 3 
+          I'm a <span className="text-light font-semibold">Full Stack Developer</span> specializing 
+          in <span className="text-light font-semibold">Frontend Development</span>, with over 3 
           years of experience crafting beautiful, responsive, and user-centric web applications. 
           Currently focused on building accessible, performant products using modern technologies 
           like React, Vue, and Next.js.
@@ -91,12 +91,12 @@ const Hero = () => {
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 mb-16"
         >
-          {/* Primary CTA - Trust blue for professionalism */}
+          {/* Primary CTA - Premium coral gradient */}
           <motion.button
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection('projects')}
-            className="px-8 py-4 bg-trust text-white font-semibold rounded-lg hover:bg-trust-dark transition-all duration-300 shadow-lg hover:shadow-trust/50 group relative overflow-hidden"
+            className="px-8 py-4 bg-premium-coral text-white font-semibold rounded-lg hover:shadow-premium-coral transition-all duration-300 shadow-premium-md group relative overflow-hidden"
           >
             <span className="relative z-10 flex items-center justify-center gap-2">
               View My Work
@@ -108,23 +108,23 @@ const Hero = () => {
                 →
               </motion.span>
             </span>
-            {/* Animated background on hover */}
+            {/* Animated shine effect on hover */}
             <motion.div
-              className="absolute inset-0 bg-trust-light"
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
               initial={{ x: '-100%' }}
-              whileHover={{ x: 0 }}
-              transition={{ duration: 0.3 }}
+              whileHover={{ x: '100%' }}
+              transition={{ duration: 0.6 }}
             />
           </motion.button>
           
-          {/* Secondary CTA - Accent color for attention */}
+          {/* Secondary CTA - Premium blue outline */}
           <motion.button
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection('contact')}
-            className="px-8 py-4 border-2 border-accent dark:border-accent border-light-accent text-light dark:text-accent-accent font-semibold rounded-lg hover:bg-accent dark:hover:bg-accent hover:bg-light-accent hover:text-navy dark:hover:text-navy hover:text-white transition-all duration-300 group"
+            className="px-8 py-4 border-2 font-semibold rounded-lg hover:bg-light-accent-secondary:bg-accent hover:text-white:text-navy transition-all duration-300 group relative overflow-hidden"
           >
-            <span className="flex items-center justify-center gap-2">
+            <span className="relative z-10 flex items-center justify-center gap-2">
               Get In Touch
               <motion.span
                 initial={{ rotate: 0 }}
@@ -152,7 +152,7 @@ const Hero = () => {
             className="cursor-pointer"
             onClick={() => scrollToSection('about')}
           >
-            <HiArrowDown className="w-6 h-6 text-light dark:text-accent-accent" />
+            <HiArrowDown className="w-6 h-6 text-light" />
           </motion.div>
         </motion.div>
       </motion.div>

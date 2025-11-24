@@ -80,7 +80,7 @@ const Experience = () => {
 
           <div className="flex flex-col md:flex-row gap-8">
             {/* Tab List */}
-            <div className="flex md:flex-col overflow-x-auto md:overflow-x-visible border-b-2 md:border-b-0 md:border-l-2 border-light dark:border-slate-lighter-border">
+            <div className="flex md:flex-col overflow-x-auto md:overflow-x-visible border-b-2 md:border-b-0 md:border-l-2 border-light">
               {experiences.map((exp, index) => (
                 <motion.button
                   key={index}
@@ -90,8 +90,8 @@ const Experience = () => {
                   onClick={() => setActiveTab(index)}
                   className={`px-5 py-3 text-left font-mono text-sm whitespace-nowrap transition-all duration-200 border-b-2 md:border-b-0 md:border-l-2 ${
                     activeTab === index
-                      ? 'text-light dark:text-accent-accent border-accent dark:border-accent border-light-accent bg-accent/5 dark:bg-accent/5 bg-light-accent/10'
-                      : 'text-light dark:text-slate-text-secondary border-transparent hover:text-light dark:hover:text-accent-accent hover:bg-accent/5 dark:hover:bg-accent/5 hover:bg-light-accent/10'
+                      ? 'text-light border-accent bg-accent/5 bg-light-accent/10'
+                      : 'text-light border-transparent hover:text-light:text-accent-accent hover:bg-accent/5:bg-accent/5 hover:bg-light-accent/10'
                   }`}
                 >
                   {exp.company}
@@ -110,9 +110,9 @@ const Experience = () => {
               >
                 {/* Role and Company */}
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-light dark:text-slate-lightest-text-primary">
+                  <h3 className="text-xl md:text-2xl font-bold text-light">
                     {experiences[activeTab].role}
-                    <span className="text-light dark:text-accent-accent">
+                    <span className="text-light">
                       {' '}
                       @{' '}
                       <a
@@ -125,7 +125,7 @@ const Experience = () => {
                       </a>
                     </span>
                   </h3>
-                  <p className="text-light dark:text-slate-text-secondary font-mono text-sm mt-1">
+                  <p className="text-light font-mono text-sm mt-1">
                     {experiences[activeTab].duration} • {experiences[activeTab].location}
                   </p>
                 </div>
@@ -138,9 +138,9 @@ const Experience = () => {
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: idx * 0.1, duration: 0.4 }}
-                      className="flex items-start space-x-3 text-light dark:text-slate-text-secondary"
+                      className="flex items-start space-x-3 text-light"
                     >
-                      <span className="text-light dark:text-accent-accent mt-1 text-lg">▹</span>
+                      <span className="text-light mt-1 text-lg">▹</span>
                       <span className="text-base leading-relaxed">{item}</span>
                     </motion.li>
                   ))}
@@ -154,22 +154,22 @@ const Experience = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="mt-12 p-6 bg-light dark:bg-navy-light-bg-alt border border-light dark:border-accent/30-accent/30 rounded-lg"
+            className="mt-12 p-6 bg-light border border-light rounded-lg"
           >
             <div className="flex items-center justify-center space-x-4">
               <div className="text-center">
-                <p className="text-4xl font-bold text-light dark:text-accent-accent">3.9+</p>
-                <p className="text-light dark:text-slate-text-secondary font-mono text-sm mt-2">Years Experience</p>
+                <p className="text-4xl font-bold text-light">3.9+</p>
+                <p className="text-light font-mono text-sm mt-2">Years Experience</p>
               </div>
-              <div className="h-16 w-px bg-slate-lighter dark:bg-slate-lighter bg-light-border" />
+              <div className="h-16 w-px bg-slate-lighter bg-light-border" />
               <div className="text-center">
-                <p className="text-4xl font-bold text-light dark:text-accent-accent">15+</p>
-                <p className="text-light dark:text-slate-text-secondary font-mono text-sm mt-2">Projects Completed</p>
+                <p className="text-4xl font-bold text-light">15+</p>
+                <p className="text-light font-mono text-sm mt-2">Projects Completed</p>
               </div>
-              <div className="h-16 w-px bg-slate-lighter dark:bg-slate-lighter bg-light-border" />
+              <div className="h-16 w-px bg-slate-lighter bg-light-border" />
               <div className="text-center">
-                <p className="text-4xl font-bold text-light dark:text-accent-accent">10+</p>
-                <p className="text-light dark:text-slate-text-secondary font-mono text-sm mt-2">Technologies</p>
+                <p className="text-4xl font-bold text-light">10+</p>
+                <p className="text-light font-mono text-sm mt-2">Technologies</p>
               </div>
             </div>
           </motion.div>

@@ -61,7 +61,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="section-padding bg-light-bg dark:bg-navy-light/30">
+    <section id="projects" className="section-padding bg-light-bg-elevated">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -99,20 +99,20 @@ const Projects = () => {
                     className="block relative rounded-lg overflow-hidden"
                   >
                     {/* Image Placeholder */}
-                    <div className="relative aspect-video bg-accent/10 dark:bg-accent/10 bg-light-accent/10 border border-light dark:border-accent/30-accent/30 flex items-center justify-center">
+                    <div className="relative aspect-video bg-accent/10 bg-light-accent/10 border border-light flex items-center justify-center">
                       <div className="text-center p-8">
-                        <HiCode className="w-16 h-16 text-accent/50 dark:text-accent/50 text-light-accent/50 mx-auto mb-4" />
-                        <p className="text-light dark:text-slate-light-text-secondary font-mono text-sm">
+                        <HiCode className="w-16 h-16 text-accent/50 text-light-accent/50 mx-auto mb-4" />
+                        <p className="text-light font-mono text-sm">
                           Project Screenshot
                         </p>
-                        <p className="text-light dark:text-slate-text-tertiary text-xs mt-2">
+                        <p className="text-light text-xs mt-2">
                           Replace with actual project image
                         </p>
                       </div>
                     </div>
                     
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-accent/20 dark:bg-accent/20 bg-light-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-accent/20 bg-light-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </a>
                 </div>
 
@@ -126,13 +126,13 @@ const Projects = () => {
                 >
                   {/* Featured Label */}
                   {project.featured && (
-                    <p className="text-light dark:text-accent-accent font-mono text-sm mb-2">
+                    <p className="text-light font-mono text-sm mb-2">
                       Featured Project
                     </p>
                   )}
 
                   {/* Project Title */}
-                  <h3 className="text-2xl md:text-3xl font-bold text-light dark:text-slate-lightest-text-primary mb-4 hover:text-light dark:hover:text-accent-accent transition-colors duration-200">
+                  <h3 className="text-2xl md:text-3xl font-bold text-light mb-4 hover:text-light:text-accent-accent transition-colors duration-200">
                     <a
                       href={project.liveUrl}
                       target="_blank"
@@ -143,8 +143,8 @@ const Projects = () => {
                   </h3>
 
                   {/* Project Description */}
-                  <div className="bg-light dark:bg-navy-light-bg-alt p-6 rounded-lg shadow-xl mb-4">
-                    <p className="text-light dark:text-slate-text-secondary text-base leading-relaxed">
+                  <div className="bg-light p-6 rounded-lg shadow-xl mb-4">
+                    <p className="text-light text-base leading-relaxed">
                       {project.description}
                     </p>
                   </div>
@@ -158,7 +158,7 @@ const Projects = () => {
                     {project.tech.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="text-light dark:text-slate-text-secondary hover:text-light dark:hover:text-accent-accent transition-colors duration-200"
+                        className="text-light hover:text-light:text-accent-accent transition-colors duration-200"
                       >
                         {tech}
                       </span>
@@ -177,7 +177,7 @@ const Projects = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-light dark:text-slate-text-secondary hover:text-light dark:hover:text-accent-accent transition-colors duration-200"
+                      className="text-light hover:text-light:text-accent-accent transition-colors duration-200"
                       aria-label="GitHub Repository"
                     >
                       <FaGithub className="w-6 h-6" />
@@ -188,7 +188,7 @@ const Projects = () => {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-light dark:text-slate-text-secondary hover:text-light dark:hover:text-accent-accent transition-colors duration-200"
+                      className="text-light hover:text-light:text-accent-accent transition-colors duration-200"
                       aria-label="Live Demo"
                     >
                       <HiExternalLink className="w-6 h-6" />
@@ -212,7 +212,7 @@ const Projects = () => {
               href="https://github.com/yourusername"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 px-6 py-3 border-2 border-accent dark:border-accent border-light-accent text-light dark:text-accent-accent rounded-lg hover:bg-accent/10 dark:hover:bg-accent/10 hover:bg-light-accent/10 transition-all duration-200 font-mono"
+              className="inline-flex items-center space-x-2 px-6 py-3 border-2 border-accent text-light rounded-lg hover:bg-accent/10:bg-accent/10 transition-all duration-200 font-mono"
             >
               <FaGithub className="w-5 h-5" />
               <span>View More on GitHub</span>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Loader from './components/Loader';
@@ -15,11 +14,10 @@ import Contact from './sections/Contact';
 /**
  * Main App Component
  * 
- * Portfolio structure with trust-building enhancements:
+ * Portfolio structure:
  * - Loading animation for professional first impression
- * - Theme provider for dark/light mode
  * - Sticky navigation bar
- * - Hero section with trust-focused CTAs
+ * - Hero section with CTAs
  * - About section
  * - Experience section
  * - Projects showcase
@@ -28,8 +26,7 @@ import Contact from './sections/Contact';
  * - Footer
  * - Scroll-to-top button for improved UX
  * 
- * All sections use smooth scroll and are fully responsive
- * Color psychology applied: Blues for trust, greens for success
+ * Dark mode theme with teal accent colors
  */
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -45,12 +42,11 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider>
-      <AnimatePresence mode="wait">
-        {isLoading ? (
-          <Loader key="loader" />
-        ) : (
-          <div key="content" className="min-h-screen bg-light-bg dark:bg-navy text-light-text-primary dark:text-slate-lightest">
+    <AnimatePresence mode="wait">
+      {isLoading ? (
+        <Loader key="loader" />
+      ) : (
+        <div key="content" className="min-h-screen bg-navy text-slate-lightest">
             {/* Navigation */}
             <Navbar />
             
@@ -69,10 +65,9 @@ function App() {
             
             {/* Scroll to Top Button */}
             <ScrollToTop />
-          </div>
-        )}
-      </AnimatePresence>
-    </ThemeProvider>
+        </div>
+      )}
+    </AnimatePresence>
   );
 }
 

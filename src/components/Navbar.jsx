@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HiMenu, HiX, HiSun, HiMoon } from 'react-icons/hi';
-import { ThemeContext } from '../context/ThemeContext';
+import { HiMenu, HiX } from 'react-icons/hi';
 import { scrollToSection, getActiveSection, debounce } from '../utils/helpers';
 
 /**
@@ -11,12 +10,10 @@ import { scrollToSection, getActiveSection, debounce } from '../utils/helpers';
  * - Sticky positioning with backdrop blur
  * - Active section highlighting
  * - Mobile responsive hamburger menu
- * - Dark/Light theme toggle
  * - Smooth scroll navigation
  * - Animated transitions with Framer Motion
  */
 const Navbar = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -75,7 +72,7 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 dark:bg-navy/95 backdrop-blur-md shadow-lg'
+          ? 'bg-navy/95 backdrop-blur-md shadow-lg'
           : 'bg-transparent'
       }`}
     >
@@ -88,7 +85,7 @@ const Navbar = () => {
             className="cursor-pointer"
             onClick={() => handleNavClick('home')}
           >
-            <h1 className="text-2xl font-bold text-light dark:text-accent-accent font-mono">
+            <h1 className="text-2xl font-bold text-accent font-mono">
               {'<AS />'}
             </h1>
           </motion.div>
@@ -108,25 +105,10 @@ const Navbar = () => {
                     : 'text-slate hover:text-accent'
                 }`}
               >
-                <span className="text-light dark:text-accent-accent text-sm font-mono">{link.number}.</span>
-                <span className="text-sm font-medium text-light dark:text-slate-lightest-text-primary">{link.label}</span>
+                <span className="text-accent text-sm font-mono">{link.number}.</span>
+                <span className="text-sm font-medium text-slate-lightest">{link.label}</span>
               </motion.button>
             ))}
-            
-            {/* Theme Toggle */}
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={toggleTheme}
-              className="p-2 rounded-lg hover:bg-navy-light transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? (
-                <HiSun className="w-5 h-5 text-accent" />
-              ) : (
-                <HiMoon className="w-5 h-5 text-accent" />
-              )}
-            </motion.button>
 
             {/* Resume Button */}
             <motion.a
@@ -135,32 +117,18 @@ const Navbar = () => {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 border border-accent dark:border-accent border-light-accent text-light dark:text-accent-accent rounded hover:bg-accent/10 dark:hover:bg-accent/10 hover:bg-light-accent/10 transition-all duration-200 text-sm font-mono"
+              className="px-4 py-2 border border-accent text-accent rounded hover:bg-accent/10 transition-all duration-200 text-sm font-mono"
             >
               Resume
             </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-4">
-            {/* Theme Toggle Mobile */}
-            <motion.button
-              whileTap={{ scale: 0.9 }}
-              onClick={toggleTheme}
-              className="p-2 rounded-lg hover:bg-navy-light transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? (
-                <HiSun className="w-5 h-5 text-accent" />
-              ) : (
-                <HiMoon className="w-5 h-5 text-accent" />
-              )}
-            </motion.button>
-
+          <div className="md:hidden">
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-light dark:text-accent-accent p-2 hover:bg-navy-light dark:hover:bg-navy-light hover:bg-light-bg-alt rounded-lg transition-colors"
+              className="text-light p-2 hover:bg-navy-light:bg-navy-light hover:rounded-lg transition-colors"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (
@@ -181,7 +149,7 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed inset-0 top-20 bg-light dark:bg-navy-light-bg md:hidden"
+            className="fixed inset-0 top-20 bg-light md:hidden"
           >
             <div className="flex flex-col items-center justify-center h-full space-y-8">
               {navLinks.map((link, index) => (
@@ -197,8 +165,8 @@ const Navbar = () => {
                       : 'text-slate hover:text-accent'
                   } transition-colors duration-200`}
                 >
-                  <span className="text-light dark:text-accent-accent text-sm font-mono">{link.number}.</span>
-                  <span className="text-2xl font-medium text-light dark:text-slate-lightest-text-primary">{link.label}</span>
+                  <span className="text-light text-sm font-mono">{link.number}.</span>
+                  <span className="text-2xl font-medium text-light">{link.label}</span>
                 </motion.button>
               ))}
               
@@ -209,7 +177,7 @@ const Navbar = () => {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 border-2 border-accent dark:border-accent border-light-accent text-light dark:text-accent-accent rounded hover:bg-accent/10 dark:hover:bg-accent/10 hover:bg-light-accent/10 transition-all duration-200 text-lg font-mono mt-4"
+                className="px-6 py-3 border-2 border-accent text-light rounded hover:bg-accent/10:bg-accent/10 transition-all duration-200 text-lg font-mono mt-4"
               >
                 Resume
               </motion.a>

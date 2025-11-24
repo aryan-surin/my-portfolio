@@ -73,7 +73,7 @@ const FloatingCode = () => {
       
       tl.to(snippet, {
         duration: 0.5,
-        opacity: 0.15,
+        opacity: 0.35,
         delay: delay,
         ease: 'power2.out',
       })
@@ -93,8 +93,8 @@ const FloatingCode = () => {
       // Add hover effect
       snippet.addEventListener('mouseenter', () => {
         gsap.to(snippet, {
-          scale: 1.2,
-          opacity: 0.3,
+          scale: 1.3,
+          opacity: 0.7,
           duration: 0.3,
           ease: 'back.out(1.7)',
         });
@@ -103,7 +103,7 @@ const FloatingCode = () => {
       snippet.addEventListener('mouseleave', () => {
         gsap.to(snippet, {
           scale: 1,
-          opacity: 0.15,
+          opacity: 0.35,
           duration: 0.3,
           ease: 'power2.out',
         });
@@ -125,9 +125,9 @@ const FloatingCode = () => {
       {codeSnippets.map((snippet, index) => (
         <div
           key={index}
-          className="code-snippet absolute pointer-events-auto cursor-pointer font-mono text-xs md:text-sm font-medium text-light-accent dark:text-accent whitespace-nowrap select-none"
+          className="code-snippet absolute pointer-events-auto cursor-pointer font-mono text-sm md:text-base font-semibold text-accent whitespace-nowrap select-none"
           style={{
-            filter: 'blur(0.5px)',
+            textShadow: '0 0 20px rgba(100, 255, 218, 0.4), 0 0 40px rgba(100, 255, 218, 0.2)',
           }}
         >
           {snippet}

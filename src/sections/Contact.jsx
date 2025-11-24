@@ -179,10 +179,10 @@ const Contact = () => {
               className="space-y-8"
             >
               <div>
-                <h3 className="text-2xl font-bold text-light dark:text-slate-lightest-text-primary mb-4">
+                <h3 className="text-2xl font-bold text-light mb-4">
                   Let's work together!
                 </h3>
-                <p className="text-light dark:text-slate-text-secondary text-base leading-relaxed mb-6">
+                <p className="text-light text-base leading-relaxed mb-6">
                   I'm currently available for freelance work and full-time opportunities. 
                   Whether you have a project in mind or just want to chat about web development, 
                   feel free to reach out!
@@ -192,12 +192,12 @@ const Contact = () => {
               {/* Contact Details */}
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
-                  <HiMail className="w-6 h-6 text-light dark:text-accent-accent mt-1 flex-shrink-0" />
+                  <HiMail className="w-6 h-6 text-light mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-light dark:text-slate-light-text-primary font-semibold mb-1">Email</p>
+                    <p className="text-light font-semibold mb-1">Email</p>
                     <a
                       href="mailto:aryan.surin@example.com"
-                      className="text-light dark:text-slate-text-secondary hover:text-light dark:hover:text-accent-accent transition-colors duration-200"
+                      className="text-light hover:text-light:text-accent-accent transition-colors duration-200"
                     >
                       aryan.surin@example.com
                     </a>
@@ -205,17 +205,17 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <HiLocationMarker className="w-6 h-6 text-light dark:text-accent-accent mt-1 flex-shrink-0" />
+                  <HiLocationMarker className="w-6 h-6 text-light mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-light dark:text-slate-light-text-primary font-semibold mb-1">Location</p>
-                    <p className="text-light dark:text-slate-text-secondary">Available for remote work</p>
+                    <p className="text-light font-semibold mb-1">Location</p>
+                    <p className="text-light">Available for remote work</p>
                   </div>
                 </div>
               </div>
 
               {/* Social Links */}
               <div>
-                <p className="text-light dark:text-slate-light-text-primary font-semibold mb-4">Connect with me</p>
+                <p className="text-light font-semibold mb-4">Connect with me</p>
                 <div className="flex space-x-4">
                   {[
                     { Icon: FaGithub, url: 'https://github.com/yourusername', label: 'GitHub' },
@@ -230,7 +230,7 @@ const Contact = () => {
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 bg-light dark:bg-navy-light-bg-alt border border-light dark:border-accent/30-accent/30 rounded-lg text-light dark:text-slate-text-secondary hover:text-light dark:hover:text-accent-accent hover:border-light dark:hover:border-accent-accent transition-all duration-200"
+                      className="p-3 bg-light border border-light rounded-lg text-light hover:text-light:text-accent-accent hover:border-light:border-accent-accent transition-all duration-200"
                       aria-label={label}
                     >
                       <Icon className="w-5 h-5" />
@@ -249,7 +249,7 @@ const Contact = () => {
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Input */}
                 <div>
-                  <label htmlFor="name" className="block text-light dark:text-slate-light-text-primary font-semibold mb-2">
+                  <label htmlFor="name" className="block text-light font-semibold mb-2">
                     Name *
                   </label>
                   <input
@@ -258,9 +258,9 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 bg-light dark:bg-navy-light-bg border ${
-                      errors.name ? 'border-red-500 dark:border-red-500 border-light-error' : 'border-light dark:border-slate-lighter-border'
-                    } rounded-lg text-light dark:text-slate-lightest-text-primary focus:outline-none focus:border-accent dark:focus:border-accent focus:border-light-accent transition-colors duration-200`}
+                    className={`w-full px-4 py-3 bg-light border ${
+                      errors.name ? 'border-red-500 border-light-error' : 'border-light'
+                    } rounded-lg text-light focus:outline-none focus:border-accent:border-accent focus:transition-colors duration-200`}
                     placeholder="Your name"
                   />
                   {errors.name && (
@@ -270,7 +270,7 @@ const Contact = () => {
 
                 {/* Email Input */}
                 <div>
-                  <label htmlFor="email" className="block text-light dark:text-slate-light-text-primary font-semibold mb-2">
+                  <label htmlFor="email" className="block text-light font-semibold mb-2">
                     Email *
                   </label>
                   <input
@@ -279,9 +279,9 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 bg-light dark:bg-navy-light-bg border ${
-                      errors.email ? 'border-red-500 dark:border-red-500 border-light-error' : 'border-light dark:border-slate-lighter-border'
-                    } rounded-lg text-light dark:text-slate-lightest-text-primary focus:outline-none focus:border-accent dark:focus:border-accent focus:border-light-accent transition-colors duration-200`}
+                    className={`w-full px-4 py-3 bg-light border ${
+                      errors.email ? 'border-red-500 border-light-error' : 'border-light'
+                    } rounded-lg text-light focus:outline-none focus:border-accent:border-accent focus:transition-colors duration-200`}
                     placeholder="your.email@example.com"
                   />
                   {errors.email && (
@@ -291,7 +291,7 @@ const Contact = () => {
 
                 {/* Subject Input */}
                 <div>
-                  <label htmlFor="subject" className="block text-light dark:text-slate-light-text-primary font-semibold mb-2">
+                  <label htmlFor="subject" className="block text-light font-semibold mb-2">
                     Subject *
                   </label>
                   <input
@@ -300,9 +300,9 @@ const Contact = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 bg-light dark:bg-navy-light-bg border ${
-                      errors.subject ? 'border-red-500 dark:border-red-500 border-light-error' : 'border-light dark:border-slate-lighter-border'
-                    } rounded-lg text-light dark:text-slate-lightest-text-primary focus:outline-none focus:border-accent dark:focus:border-accent focus:border-light-accent transition-colors duration-200`}
+                    className={`w-full px-4 py-3 bg-light border ${
+                      errors.subject ? 'border-red-500 border-light-error' : 'border-light'
+                    } rounded-lg text-light focus:outline-none focus:border-accent:border-accent focus:transition-colors duration-200`}
                     placeholder="Project inquiry"
                   />
                   {errors.subject && (
@@ -312,7 +312,7 @@ const Contact = () => {
 
                 {/* Message Input */}
                 <div>
-                  <label htmlFor="message" className="block text-light dark:text-slate-light-text-primary font-semibold mb-2">
+                  <label htmlFor="message" className="block text-light font-semibold mb-2">
                     Message *
                   </label>
                   <textarea
@@ -321,9 +321,9 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows="5"
-                    className={`w-full px-4 py-3 bg-light dark:bg-navy-light-bg border ${
-                      errors.message ? 'border-red-500 dark:border-red-500 border-light-error' : 'border-light dark:border-slate-lighter-border'
-                    } rounded-lg text-light dark:text-slate-lightest-text-primary focus:outline-none focus:border-accent dark:focus:border-accent focus:border-light-accent transition-colors duration-200 resize-none`}
+                    className={`w-full px-4 py-3 bg-light border ${
+                      errors.message ? 'border-red-500 border-light-error' : 'border-light'
+                    } rounded-lg text-light focus:outline-none focus:border-accent:border-accent focus:transition-colors duration-200 resize-none`}
                     placeholder="Tell me about your project..."
                   />
                   {errors.message && (
@@ -337,7 +337,7 @@ const Contact = () => {
                   whileTap={{ scale: 0.98 }}
                   type="submit"
                   disabled={formStatus.loading}
-                  className="w-full px-6 py-4 bg-accent dark:bg-accent bg-light-accent text-navy dark:text-navy text-white font-semibold rounded-lg hover:bg-accent-hover dark:hover:bg-accent-hover hover:bg-light-accent-hover transition-all duration-200 shadow-lg hover:shadow-accent/50 dark:hover:shadow-accent/50 hover:shadow-light-accent/50 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-6 py-4 bg-accent text-navy text-white font-semibold rounded-lg hover:bg-accent-hover:bg-accent-hover hover:transition-all duration-200 shadow-lg hover:shadow-accent/50:shadow-accent/50 hover:shadow-light-accent/50 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {formStatus.loading ? 'Sending...' : 'Send Message'}
                 </motion.button>
