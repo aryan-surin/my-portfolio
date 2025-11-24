@@ -50,7 +50,7 @@ function App() {
         {isLoading ? (
           <Loader key="loader" />
         ) : (
-          <div key="content" className="min-h-screen bg-navy text-slate-lightest">
+          <div key="content" className="min-h-screen bg-light-bg dark:bg-navy text-light-text-primary dark:text-slate-lightest">
             {/* Navigation */}
             <Navbar />
             

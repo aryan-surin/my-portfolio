@@ -52,7 +52,7 @@ const Hero = () => {
         {/* Greeting */}
         <motion.p
           variants={itemVariants}
-          className="text-accent font-mono text-base md:text-lg mb-5"
+          className="text-light dark:text-accent-accent font-mono text-base md:text-lg mb-5"
         >
           Hi, my name is
         </motion.p>
@@ -60,7 +60,7 @@ const Hero = () => {
         {/* Name */}
         <motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-lightest mb-4"
+          className="text-5xl md:text-6xl lg:text-7xl font-bold text-light dark:text-slate-lightest-text-primary mb-4"
         >
           Aryan Surin.
         </motion.h1>
@@ -68,7 +68,7 @@ const Hero = () => {
         {/* Tagline */}
         <motion.h2
           variants={itemVariants}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate mb-6"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold text-light dark:text-slate-text-secondary mb-6"
         >
           I build exceptional digital experiences.
         </motion.h2>
@@ -76,10 +76,10 @@ const Hero = () => {
         {/* Description */}
         <motion.p
           variants={itemVariants}
-          className="text-slate max-w-2xl text-base md:text-lg leading-relaxed mb-8"
+          className="text-light dark:text-slate-text-secondary max-w-2xl text-base md:text-lg leading-relaxed mb-8"
         >
-          I'm a <span className="text-accent font-semibold">Full Stack Developer</span> specializing 
-          in <span className="text-accent font-semibold">Frontend Development</span>, with over 3 
+          I'm a <span className="text-light dark:text-accent-accent font-semibold">Full Stack Developer</span> specializing 
+          in <span className="text-light dark:text-accent-accent font-semibold">Frontend Development</span>, with over 3 
           years of experience crafting beautiful, responsive, and user-centric web applications. 
           Currently focused on building accessible, performant products using modern technologies 
           like React, Vue, and Next.js.
@@ -121,7 +121,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection('contact')}
-            className="px-8 py-4 border-2 border-accent text-accent font-semibold rounded-lg hover:bg-accent hover:text-navy transition-all duration-300 group"
+            className="px-8 py-4 border-2 border-accent dark:border-accent border-light-accent text-light dark:text-accent-accent font-semibold rounded-lg hover:bg-accent dark:hover:bg-accent hover:bg-light-accent hover:text-navy dark:hover:text-navy hover:text-white transition-all duration-300 group"
           >
             <span className="flex items-center justify-center gap-2">
               Get In Touch
@@ -151,7 +151,7 @@ const Hero = () => {
             className="cursor-pointer"
             onClick={() => scrollToSection('about')}
           >
-            <HiArrowDown className="w-6 h-6 text-accent" />
+            <HiArrowDown className="w-6 h-6 text-light dark:text-accent-accent" />
           </motion.div>
         </motion.div>
       </motion.div>

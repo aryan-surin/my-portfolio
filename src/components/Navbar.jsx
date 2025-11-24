@@ -75,7 +75,7 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-navy/95 backdrop-blur-md shadow-lg'
+          ? 'bg-white/95 dark:bg-navy/95 backdrop-blur-md shadow-lg'
           : 'bg-transparent'
       }`}
     >
@@ -88,7 +88,7 @@ const Navbar = () => {
             className="cursor-pointer"
             onClick={() => handleNavClick('home')}
           >
-            <h1 className="text-2xl font-bold text-accent font-mono">
+            <h1 className="text-2xl font-bold text-light dark:text-accent-accent font-mono">
               {'<AS />'}
             </h1>
           </motion.div>
@@ -108,8 +108,8 @@ const Navbar = () => {
                     : 'text-slate hover:text-accent'
                 }`}
               >
-                <span className="text-accent text-sm font-mono">{link.number}.</span>
-                <span className="text-sm font-medium">{link.label}</span>
+                <span className="text-light dark:text-accent-accent text-sm font-mono">{link.number}.</span>
+                <span className="text-sm font-medium text-light dark:text-slate-lightest-text-primary">{link.label}</span>
               </motion.button>
             ))}
             
@@ -135,7 +135,7 @@ const Navbar = () => {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 border border-accent text-accent rounded hover:bg-accent/10 transition-all duration-200 text-sm font-mono"
+              className="px-4 py-2 border border-accent dark:border-accent border-light-accent text-light dark:text-accent-accent rounded hover:bg-accent/10 dark:hover:bg-accent/10 hover:bg-light-accent/10 transition-all duration-200 text-sm font-mono"
             >
               Resume
             </motion.a>
@@ -160,7 +160,7 @@ const Navbar = () => {
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-accent p-2 hover:bg-navy-light rounded-lg transition-colors"
+              className="text-light dark:text-accent-accent p-2 hover:bg-navy-light dark:hover:bg-navy-light hover:bg-light-bg-alt rounded-lg transition-colors"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (
@@ -181,7 +181,7 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed inset-0 top-20 bg-navy-light md:hidden"
+            className="fixed inset-0 top-20 bg-light dark:bg-navy-light-bg md:hidden"
           >
             <div className="flex flex-col items-center justify-center h-full space-y-8">
               {navLinks.map((link, index) => (
@@ -197,8 +197,8 @@ const Navbar = () => {
                       : 'text-slate hover:text-accent'
                   } transition-colors duration-200`}
                 >
-                  <span className="text-accent text-sm font-mono">{link.number}.</span>
-                  <span className="text-2xl font-medium">{link.label}</span>
+                  <span className="text-light dark:text-accent-accent text-sm font-mono">{link.number}.</span>
+                  <span className="text-2xl font-medium text-light dark:text-slate-lightest-text-primary">{link.label}</span>
                 </motion.button>
               ))}
               
@@ -209,7 +209,7 @@ const Navbar = () => {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 border-2 border-accent text-accent rounded hover:bg-accent/10 transition-all duration-200 text-lg font-mono mt-4"
+                className="px-6 py-3 border-2 border-accent dark:border-accent border-light-accent text-light dark:text-accent-accent rounded hover:bg-accent/10 dark:hover:bg-accent/10 hover:bg-light-accent/10 transition-all duration-200 text-lg font-mono mt-4"
               >
                 Resume
               </motion.a>

@@ -33,7 +33,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-navy-light/30">
+    <section id="about" className="section-padding bg-light-bg-alt dark:bg-navy-light/30">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -42,7 +42,7 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           {/* Section Heading */}
-          <h2 className="numbered-heading before:content-['01.']">
+          <h2 className="numbered-heading before:content-['01.'] text-light dark:text-slate-lightest-text-primary">
             About Me
           </h2>
 
@@ -53,9 +53,9 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-slate text-base md:text-lg leading-relaxed"
+                className="text-light dark:text-slate-text-secondary text-base md:text-lg leading-relaxed"
               >
-                Hello! I'm <span className="text-accent font-semibold">Aryan Surin</span>, 
+                Hello! I'm <span className="text-light dark:text-accent-accent font-semibold">Aryan Surin</span>, 
                 a passionate Full Stack Developer with a strong focus on frontend development. 
                 My journey in web development began over 3 years ago, and I've been captivated 
                 by the endless possibilities of creating intuitive and visually stunning user 
@@ -66,12 +66,12 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
-                className="text-slate text-base md:text-lg leading-relaxed"
+                className="text-light dark:text-slate-text-secondary text-base md:text-lg leading-relaxed"
               >
                 I specialize in building exceptional digital experiences using modern technologies 
-                like <span className="text-accent font-semibold">React</span>, 
-                <span className="text-accent font-semibold"> Vue.js</span>, and 
-                <span className="text-accent font-semibold"> Nuxt.js</span>. I'm particularly 
+                like <span className="text-light dark:text-accent-accent font-semibold">React</span>, 
+                <span className="text-light dark:text-accent-accent font-semibold"> Vue.js</span>, and 
+                <span className="text-light dark:text-accent-accent font-semibold"> Nuxt.js</span>. I'm particularly 
                 passionate about creating responsive, accessible, and performant web applications 
                 that deliver seamless user experiences across all devices.
               </motion.p>
@@ -80,7 +80,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="text-slate text-base md:text-lg leading-relaxed"
+                className="text-light dark:text-slate-text-secondary text-base md:text-lg leading-relaxed"
               >
                 When I'm not coding, you'll find me exploring new web technologies, contributing 
                 to open-source projects, or sharing my knowledge with the developer community. 
@@ -93,7 +93,7 @@ const About = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
               >
-                <p className="text-slate text-base md:text-lg mb-4">
+                <p className="text-light dark:text-slate-text-secondary text-base md:text-lg mb-4">
                   Here are some technologies I've been working with recently:
                 </p>
                 
@@ -104,9 +104,9 @@ const About = () => {
                       initial={{ opacity: 0, x: -20 }}
                       animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                       transition={{ delay: 0.6 + index * 0.05, duration: 0.4 }}
-                      className="flex items-center space-x-2 text-slate"
+                      className="flex items-center space-x-2 text-light dark:text-slate-text-secondary"
                     >
-                      <span className="text-accent text-sm">▹</span>
+                      <span className="text-light dark:text-accent-accent text-sm">▹</span>
                       <span className="text-sm font-mono">{tech}</span>
                     </motion.div>
                   ))}
@@ -123,16 +123,16 @@ const About = () => {
             >
               <div className="relative w-full aspect-square max-w-xs mx-auto">
                 {/* Image Container */}
-                <div className="relative z-10 rounded-lg overflow-hidden bg-accent/10 border-2 border-accent/30 group-hover:border-accent transition-all duration-300">
+                <div className="relative z-10 rounded-lg overflow-hidden bg-accent/10 dark:bg-accent/10 bg-light-accent/10 border-2 border-light dark:border-accent/30-accent/30 group-hover:border-accent dark:group-hover:border-accent group-hover:border-light-accent transition-all duration-300">
                   <div className="w-full h-full bg-gradient-to-br from-accent/20 to-blue-500/20 flex items-center justify-center">
                     <div className="text-center p-6">
-                      <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-accent/20 flex items-center justify-center">
-                        <span className="text-4xl font-bold text-accent">AS</span>
+                      <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-accent/20 dark:bg-accent/20 bg-light-accent/20 flex items-center justify-center">
+                        <span className="text-4xl font-bold text-light dark:text-accent-accent">AS</span>
                       </div>
-                      <p className="text-slate-light text-sm font-mono">
+                      <p className="text-light dark:text-slate-light-text-secondary text-sm font-mono">
                         Profile Photo
                       </p>
-                      <p className="text-slate text-xs mt-2">
+                      <p className="text-light dark:text-slate-text-tertiary text-xs mt-2">
                         Replace with your image
                       </p>
                     </div>
@@ -143,7 +143,7 @@ const About = () => {
                 </div>
 
                 {/* Decorative border */}
-                <div className="absolute inset-0 rounded-lg border-2 border-accent translate-x-5 translate-y-5 -z-10 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-300" />
+                <div className="absolute inset-0 rounded-lg border-2 border-accent dark:border-accent border-light-accent translate-x-5 translate-y-5 -z-10 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-300" />
               </div>
             </motion.div>
           </div>
