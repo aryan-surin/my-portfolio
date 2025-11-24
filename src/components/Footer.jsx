@@ -20,7 +20,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="py-8 px-6 md:px-12 lg:px-24 bg-light border-t border-light">
+    <footer className="py-8 px-6 md:px-12 lg:px-24 bg-navy-lighter border-t border-accent/20">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
           {/* Social Links - Hidden on mobile, shown on desktop */}
@@ -31,7 +31,7 @@ const Footer = () => {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-light hover:text-light:text-accent-accent transition-colors duration-200"
+                className="text-slate-lightest hover:text-accent transition-colors duration-200"
                 aria-label={label}
               >
                 <Icon className="w-5 h-5" />
@@ -52,11 +52,11 @@ const Footer = () => {
           </div>
 
           {/* Tech Stack Badge */}
-          <div className="flex items-center space-x-2 text-light text-xs font-mono">
+          <div className="flex items-center space-x-2 text-slate-light text-xs font-mono">
             <span>Built with</span>
-            <span className="text-light">React</span>
+            <span className="text-accent">React</span>
             <span>+</span>
-            <span className="text-light">Tailwind</span>
+            <span className="text-accent">Tailwind</span>
           </div>
         </div>
 

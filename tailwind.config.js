@@ -8,52 +8,69 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Dark navy backgrounds - Professional and trustworthy
+        // Premium navy backgrounds - Deeper, more sophisticated
         navy: {
-          DEFAULT: '#0a192f',
-          light: '#112240',
-          lighter: '#233554',
+          DEFAULT: '#0f172a',      // Rich deep navy (Tailwind slate-900)
+          light: '#1e293b',        // Medium navy (Tailwind slate-800)
+          lighter: '#334155',      // Light navy for cards (Tailwind slate-700)
+          dark: '#020617',         // Almost black (Tailwind slate-950)
         },
-        // Trust-focused blue palette (primary for CTAs and highlights)
-        trust: {
-          DEFAULT: '#2563eb', // Professional blue
-          light: '#3b82f6',
-          dark: '#1e40af',
-          darker: '#1e3a8a',
-        },
-        // Success and growth indicators (green)
-        success: {
-          DEFAULT: '#10b981',
-          light: '#34d399',
-          dark: '#059669',
-        },
-        // Slate for text and secondary elements
-        slate: {
-          DEFAULT: '#8892b0',
-          light: '#a8b2d1',
-          lighter: '#a8b2d1',
-          lightest: '#ccd6f6',
-        },
-        // Accent color for CTAs and interactive elements
+        // Premium teal accent - Softer, more refined
         accent: {
-          DEFAULT: '#64ffda',
-          hover: '#52e3c2',
-          orange: '#f97316', // Alternative CTA color
-          orangeHover: '#ea580c',
+          DEFAULT: '#5eead4',      // Sophisticated teal (Tailwind teal-300)
+          hover: '#2dd4bf',        // Brighter teal (Tailwind teal-400)
+          muted: '#14b8a6',        // Subdued teal (Tailwind teal-500)
+          glow: '#99f6e4',         // Light teal for glows (Tailwind teal-200)
+        },
+        // Premium slate text colors - Better hierarchy
+        slate: {
+          DEFAULT: '#94a3b8',      // Body text (Tailwind slate-400)
+          light: '#cbd5e1',        // Secondary text (Tailwind slate-300)
+          lightest: '#f1f5f9',     // Headings, almost white (Tailwind slate-100)
+          dark: '#64748b',         // Muted text (Tailwind slate-500)
+          darker: '#475569',       // Very muted (Tailwind slate-600)
+        },
+        // Trust-focused blue for CTAs
+        trust: {
+          DEFAULT: '#3b82f6',      // Professional blue (Tailwind blue-500)
+          light: '#60a5fa',        // Light blue (Tailwind blue-400)
+          dark: '#2563eb',         // Dark blue (Tailwind blue-600)
+          darker: '#1e40af',       // Darker blue (Tailwind blue-700)
+        },
+        // Success indicators
+        success: {
+          DEFAULT: '#10b981',      // Green (Tailwind emerald-500)
+          light: '#34d399',        // Light green (Tailwind emerald-400)
+          dark: '#059669',         // Dark green (Tailwind emerald-600)
         },
         // Warning and error states
         warning: {
-          DEFAULT: '#f59e0b',
-          light: '#fbbf24',
+          DEFAULT: '#f59e0b',      // Amber (Tailwind amber-500)
+          light: '#fbbf24',        // Light amber (Tailwind amber-400)
         },
         error: {
-          DEFAULT: '#ef4444',
-          light: '#f87171',
+          DEFAULT: '#ef4444',      // Red (Tailwind red-500)
+          light: '#f87171',        // Light red (Tailwind red-400)
         },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['Fira Code', 'monospace'],
+      },
+      // Premium box shadows with glow effects
+      boxShadow: {
+        'glow-sm': '0 0 15px rgba(94, 234, 212, 0.15)',
+        'glow-md': '0 0 25px rgba(94, 234, 212, 0.2)',
+        'glow-lg': '0 0 35px rgba(94, 234, 212, 0.25)',
+        'card': '0 4px 20px rgba(0, 0, 0, 0.3)',
+        'card-hover': '0 8px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(94, 234, 212, 0.1)',
+        'premium': '0 10px 40px rgba(0, 0, 0, 0.5)',
+      },
+      // Premium gradients and effects
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(circle at center, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'accent-glow': 'radial-gradient(circle at 50% 50%, rgba(94, 234, 212, 0.15) 0%, transparent 70%)',
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',

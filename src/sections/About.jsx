@@ -33,8 +33,10 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-light-bg-subtle">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="section-padding bg-navy relative overflow-hidden">
+      {/* Subtle accent glow */}
+      <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -42,7 +44,7 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           {/* Section Heading */}
-          <h2 className="numbered-heading before:content-['01.'] text-light">
+          <h2 className="numbered-heading before:content-['01.'] text-slate-lightest">
             About Me
           </h2>
 
@@ -53,9 +55,9 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-light text-base md:text-lg leading-relaxed"
+                className="text-slate text-base md:text-lg leading-relaxed"
               >
-                Hello! I'm <span className="text-light font-semibold">Aryan Surin</span>, 
+                Hello! I'm <span className="text-accent font-semibold">Aryan Surin</span>, 
                 a passionate Full Stack Developer with a strong focus on frontend development. 
                 My journey in web development began over 3 years ago, and I've been captivated 
                 by the endless possibilities of creating intuitive and visually stunning user 
@@ -66,12 +68,12 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
-                className="text-light text-base md:text-lg leading-relaxed"
+                className="text-slate text-base md:text-lg leading-relaxed"
               >
                 I specialize in building exceptional digital experiences using modern technologies 
-                like <span className="text-light font-semibold">React</span>, 
-                <span className="text-light font-semibold"> Vue.js</span>, and 
-                <span className="text-light font-semibold"> Nuxt.js</span>. I'm particularly 
+                like <span className="text-accent font-semibold">React</span>, 
+                <span className="text-accent font-semibold"> Vue.js</span>, and 
+                <span className="text-accent font-semibold"> Nuxt.js</span>. I'm particularly 
                 passionate about creating responsive, accessible, and performant web applications 
                 that deliver seamless user experiences across all devices.
               </motion.p>
@@ -80,7 +82,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="text-light text-base md:text-lg leading-relaxed"
+                className="text-slate text-base md:text-lg leading-relaxed"
               >
                 When I'm not coding, you'll find me exploring new web technologies, contributing 
                 to open-source projects, or sharing my knowledge with the developer community. 
@@ -93,21 +95,21 @@ const About = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
               >
-                <p className="text-light text-base md:text-lg mb-4">
+                <p className="text-slate-light text-base md:text-lg mb-6 font-medium">
                   Here are some technologies I've been working with recently:
                 </p>
                 
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <div className="flex flex-wrap gap-3">
                   {technologies.map((tech, index) => (
                     <motion.div
                       key={tech}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                       transition={{ delay: 0.6 + index * 0.05, duration: 0.4 }}
-                      className="flex items-center space-x-2 text-light"
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      className="px-4 py-2 bg-navy-lighter border border-accent/20 rounded-lg text-slate-light font-mono text-sm hover:border-accent/40 hover:bg-navy-light hover:text-accent hover:shadow-glow-sm transition-all duration-300 cursor-default"
                     >
-                      <span className="text-light text-sm">▹</span>
-                      <span className="text-sm font-mono">{tech}</span>
+                      {tech}
                     </motion.div>
                   ))}
                 </div>
@@ -123,27 +125,27 @@ const About = () => {
             >
               <div className="relative w-full aspect-square max-w-xs mx-auto">
                 {/* Image Container */}
-                <div className="relative z-10 rounded-lg overflow-hidden bg-accent/10 bg-light-accent/10 border-2 border-light group-hover:border-accent:border-accent group-hover:transition-all duration-300">
-                  <div className="w-full h-full bg-gradient-to-br from-accent/20 to-blue-500/20 flex items-center justify-center">
+                <div className="relative z-10 rounded-lg overflow-hidden bg-navy-lighter border-2 border-accent/30 shadow-card group-hover:border-accent group-hover:shadow-card-hover transition-all duration-300">
+                  <div className="w-full h-full bg-gradient-to-br from-accent/10 to-trust/10 flex items-center justify-center">
                     <div className="text-center p-6">
-                      <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-accent/20 bg-light-accent/20 flex items-center justify-center">
-                        <span className="text-4xl font-bold text-light">AS</span>
+                      <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-accent/20 flex items-center justify-center shadow-glow-md">
+                        <span className="text-4xl font-bold text-accent">AS</span>
                       </div>
-                      <p className="text-light text-sm font-mono">
+                      <p className="text-slate-lightest text-sm font-mono font-semibold">
                         Profile Photo
                       </p>
-                      <p className="text-light text-xs mt-2">
+                      <p className="text-slate text-xs mt-2">
                         Replace with your image
                       </p>
                     </div>
                   </div>
                   
                   {/* Overlay on hover */}
-                  <div className="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
-                {/* Decorative border */}
-                <div className="absolute inset-0 rounded-lg border-2 border-accent translate-x-5 translate-y-5 -z-10 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-300" />
+                {/* Decorative border with glow */}
+                <div className="absolute inset-0 rounded-lg border-2 border-accent/40 translate-x-5 translate-y-5 -z-10 group-hover:translate-x-3 group-hover:translate-y-3 group-hover:shadow-glow-md transition-all duration-300" />
               </div>
             </motion.div>
           </div>

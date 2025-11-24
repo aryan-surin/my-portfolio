@@ -42,18 +42,22 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center section-padding"
+      className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden"
     >
+      {/* Accent glow overlay */}
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/3 left-1/3 w-80 h-80 bg-trust/5 rounded-full blur-3xl" />
+
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-5xl w-full"
+        className="max-w-5xl w-full relative z-10"
       >
         {/* Greeting */}
         <motion.p
           variants={itemVariants}
-          className="text-light font-mono text-base md:text-lg mb-5"
+          className="text-slate-lightest font-mono text-base md:text-lg mb-5"
         >
           Hi, my name is
         </motion.p>
@@ -61,7 +65,7 @@ const Hero = () => {
         {/* Name */}
         <motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold text-light mb-4"
+          className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-lightest mb-4"
         >
           Aryan Surin.
         </motion.h1>
@@ -69,7 +73,7 @@ const Hero = () => {
         {/* Tagline */}
         <motion.h2
           variants={itemVariants}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-light mb-6"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-lightest mb-6"
         >
           I build exceptional digital experiences.
         </motion.h2>
@@ -77,10 +81,10 @@ const Hero = () => {
         {/* Description */}
         <motion.p
           variants={itemVariants}
-          className="text-light max-w-2xl text-base md:text-lg leading-relaxed mb-8"
+          className="text-slate max-w-2xl text-base md:text-lg leading-relaxed mb-8"
         >
-          I'm a <span className="text-light font-semibold">Full Stack Developer</span> specializing 
-          in <span className="text-light font-semibold">Frontend Development</span>, with over 3 
+          I'm a <span className="text-accent font-semibold">Full Stack Developer</span> specializing 
+          in <span className="text-accent font-semibold">Frontend Development</span>, with over 3 
           years of experience crafting beautiful, responsive, and user-centric web applications. 
           Currently focused on building accessible, performant products using modern technologies 
           like React, Vue, and Next.js.
@@ -91,12 +95,12 @@ const Hero = () => {
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 mb-16"
         >
-          {/* Primary CTA - Premium coral gradient */}
+          {/* Primary CTA - Trust blue gradient */}
           <motion.button
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection('projects')}
-            className="px-8 py-4 bg-premium-coral text-white font-semibold rounded-lg hover:shadow-premium-coral transition-all duration-300 shadow-premium-md group relative overflow-hidden"
+            className="px-8 py-4 bg-gradient-to-r from-trust to-trust-light text-white font-semibold rounded-lg shadow-glow-md hover:shadow-glow-lg transition-all duration-300 group relative overflow-hidden"
           >
             <span className="relative z-10 flex items-center justify-center gap-2">
               View My Work
@@ -117,12 +121,12 @@ const Hero = () => {
             />
           </motion.button>
           
-          {/* Secondary CTA - Premium blue outline */}
+          {/* Secondary CTA - Accent outline */}
           <motion.button
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection('contact')}
-            className="px-8 py-4 border-2 font-semibold rounded-lg hover:bg-light-accent-secondary:bg-accent hover:text-white:text-navy transition-all duration-300 group relative overflow-hidden"
+            className="px-8 py-4 border-2 border-accent text-accent font-semibold rounded-lg hover:bg-accent hover:text-navy hover:shadow-glow-sm transition-all duration-300 group relative overflow-hidden"
           >
             <span className="relative z-10 flex items-center justify-center gap-2">
               Get In Touch
@@ -152,7 +156,7 @@ const Hero = () => {
             className="cursor-pointer"
             onClick={() => scrollToSection('about')}
           >
-            <HiArrowDown className="w-6 h-6 text-light" />
+            <HiArrowDown className="w-6 h-6 text-slate-lightest" />
           </motion.div>
         </motion.div>
       </motion.div>

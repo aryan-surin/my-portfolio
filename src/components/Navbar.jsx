@@ -72,7 +72,7 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-navy/95 backdrop-blur-md shadow-lg'
+          ? 'bg-navy/80 backdrop-blur-md shadow-glow-md border-b border-accent/10'
           : 'bg-transparent'
       }`}
     >
@@ -128,7 +128,7 @@ const Navbar = () => {
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-light p-2 hover:bg-navy-light:bg-navy-light hover:rounded-lg transition-colors"
+              className="text-slate-lightest p-2 hover:bg-navy-light:bg-navy-light hover:rounded-lg transition-colors"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (
@@ -149,7 +149,7 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed inset-0 top-20 bg-light md:hidden"
+            className="fixed inset-0 top-20 bg-navy/95 backdrop-blur-md md:hidden"
           >
             <div className="flex flex-col items-center justify-center h-full space-y-8">
               {navLinks.map((link, index) => (
@@ -165,8 +165,8 @@ const Navbar = () => {
                       : 'text-slate hover:text-accent'
                   } transition-colors duration-200`}
                 >
-                  <span className="text-light text-sm font-mono">{link.number}.</span>
-                  <span className="text-2xl font-medium text-light">{link.label}</span>
+                  <span className="text-slate-lightest text-sm font-mono">{link.number}.</span>
+                  <span className="text-2xl font-medium text-slate-lightest">{link.label}</span>
                 </motion.button>
               ))}
               
@@ -177,7 +177,7 @@ const Navbar = () => {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 border-2 border-accent text-light rounded hover:bg-accent/10:bg-accent/10 transition-all duration-200 text-lg font-mono mt-4"
+                className="px-6 py-3 border-2 border-accent text-slate-lightest rounded hover:bg-accent/10:bg-accent/10 transition-all duration-200 text-lg font-mono mt-4"
               >
                 Resume
               </motion.a>

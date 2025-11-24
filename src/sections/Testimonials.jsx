@@ -79,8 +79,12 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="section-padding bg-light">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="section-padding bg-navy relative overflow-hidden">
+      {/* Accent glow overlay */}
+      <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-trust/5 rounded-full blur-3xl" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -89,11 +93,11 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-light mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-lightest mb-4">
             What Clients Say
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
-          <p className="text-light text-lg max-w-2xl mx-auto">
+          <p className="text-slate text-lg max-w-2xl mx-auto">
             Don't just take my word for it - here's what clients have to say about working together.
           </p>
         </motion.div>
@@ -110,36 +114,36 @@ const Testimonials = () => {
             <motion.div
               key={testimonial.id}
               variants={cardVariants}
-              className="rounded-lg p-8 shadow-xl hover:shadow-2xl transition-shadow border hover:border-light-accent:border-trust group"
+              className="bg-navy-lighter rounded-lg p-8 shadow-card hover:shadow-card-hover transition-all duration-300 border border-accent/20 hover:border-accent/40 group"
             >
               {/* Rating Stars */}
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, index) => (
                   <HiStar
                     key={index}
-                    className="w-5 h-5 text-light group-hover:text-success:text-success group-hover:transition-colors"
+                    className="w-5 h-5 text-accent transition-colors"
                   />
                 ))}
               </div>
 
               {/* Testimonial Text */}
-              <p className="text-light mb-6 leading-relaxed italic">
+              <p className="text-slate mb-6 leading-relaxed italic">
                 "{testimonial.text}"
               </p>
 
               {/* Client Info */}
-              <div className="flex items-center gap-4 pt-4 border-t border-light">
+              <div className="flex items-center gap-4 pt-4 border-t border-accent/20">
                 {/* Profile Photo Placeholder */}
-                <div className="w-12 h-12 rounded-full bg-light flex items-center justify-center text-light font-bold text-lg">
+                <div className="w-12 h-12 rounded-full bg-navy border-2 border-accent/30 flex items-center justify-center text-accent font-bold text-lg">
                   {testimonial.name.split(' ').map(n => n[0]).join('')}
                 </div>
 
                 {/* Client Details */}
                 <div>
-                  <h4 className="text-light font-semibold">
+                  <h4 className="text-slate-lightest font-semibold">
                     {testimonial.name}
                   </h4>
-                  <p className="text-light text-sm">{testimonial.role}</p>
+                  <p className="text-slate-light text-sm">{testimonial.role}</p>
                 </div>
               </div>
             </motion.div>
@@ -154,20 +158,20 @@ const Testimonials = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-16 text-center"
         >
-          <div className="inline-flex items-center gap-8 text-light">
+          <div className="inline-flex items-center gap-8">
             <div className="flex flex-col items-center">
-              <span className="text-3xl font-bold text-light">50+</span>
-              <span className="text-sm">Projects Completed</span>
+              <span className="text-3xl font-bold text-accent">50+</span>
+              <span className="text-sm text-slate-light">Projects Completed</span>
             </div>
-            <div className="w-px h-12 bg-light"></div>
+            <div className="w-px h-12 bg-accent/20"></div>
             <div className="flex flex-col items-center">
-              <span className="text-3xl font-bold text-light">100%</span>
-              <span className="text-sm">Client Satisfaction</span>
+              <span className="text-3xl font-bold text-accent">100%</span>
+              <span className="text-sm text-slate-light">Client Satisfaction</span>
             </div>
-            <div className="w-px h-12 bg-light"></div>
+            <div className="w-px h-12 bg-accent/20"></div>
             <div className="flex flex-col items-center">
-              <span className="text-3xl font-bold text-light">5+ Years</span>
-              <span className="text-sm">Experience</span>
+              <span className="text-3xl font-bold text-accent">5+ Years</span>
+              <span className="text-sm text-slate-light">Experience</span>
             </div>
           </div>
         </motion.div>
