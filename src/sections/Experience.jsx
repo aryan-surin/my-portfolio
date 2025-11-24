@@ -65,9 +65,9 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="section-padding bg-navy-lighter relative overflow-hidden">
+    <section id="experience" className="section-padding bg-cream-elevated light:bg-cream-elevated dark:bg-navy-lighter relative overflow-hidden">
       {/* Accent glow overlay */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-coral/ light:bg-coral/ dark:bg-accent/5 rounded-full blur-3xl" />
 
       <div className="max-w-4xl mx-auto relative z-10">
         <motion.div
@@ -113,22 +113,22 @@ const Experience = () => {
               >
                 {/* Role and Company */}
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-slate-lightest">
+                  <h3 className="text-xl md:text-2xl font-bold text-ink-lightest light:text-ink-lightest dark:text-slate-lightest">
                     {experiences[activeTab].role}
-                    <span className="text-accent">
+                    <span className="text-coral light:text-coral dark:text-accent">
                       {' '}
                       @{' '}
                       <a
                         href={experiences[activeTab].companyUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-accent-hover transition-colors"
+                        className="hover:text-coral light:text-coral dark:text-accent-hover transition-colors"
                       >
                         {experiences[activeTab].company}
                       </a>
                     </span>
                   </h3>
-                  <p className="text-slate-light font-mono text-sm mt-1">
+                  <p className="text-ink-light light:text-ink-light dark:text-slate-light font-mono text-sm mt-1">
                     {experiences[activeTab].duration} • {experiences[activeTab].location}
                   </p>
                 </div>
@@ -143,8 +143,8 @@ const Experience = () => {
                       transition={{ delay: idx * 0.1, duration: 0.4 }}
                       className="flex items-start space-x-3"
                     >
-                      <span className="text-accent mt-1 text-lg">▹</span>
-                      <span className="text-slate text-base leading-relaxed">{item}</span>
+                      <span className="text-coral light:text-coral dark:text-accent mt-1 text-lg">▹</span>
+                      <span className="text-ink light:text-ink dark:text-slate text-base leading-relaxed">{item}</span>
                     </motion.li>
                   ))}
                 </ul>
@@ -157,22 +157,22 @@ const Experience = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="mt-12 p-6 bg-navy-lighter border border-accent/20 rounded-lg shadow-card"
+            className="mt-12 p-6 bg-cream-elevated light:bg-cream-elevated dark:bg-navy-lighter border border-coral/ light:border-coral/ dark:border-accent/20 rounded-lg shadow-light-card light:shadow-light-card dark:shadow-card"
           >
             <div className="flex items-center justify-center space-x-4">
               <div className="text-center">
-                <p className="text-4xl font-bold text-accent">3.9+</p>
-                <p className="text-slate-light font-mono text-sm mt-2">Years Experience</p>
+                <p className="text-4xl font-bold text-coral light:text-coral dark:text-accent">3.9+</p>
+                <p className="text-ink-light light:text-ink-light dark:text-slate-light font-mono text-sm mt-2">Years Experience</p>
               </div>
-              <div className="h-16 w-px bg-accent/20" />
+              <div className="h-16 w-px bg-coral/ light:bg-coral/ dark:bg-accent/20" />
               <div className="text-center">
-                <p className="text-4xl font-bold text-accent">15+</p>
-                <p className="text-slate-light font-mono text-sm mt-2">Projects Completed</p>
+                <p className="text-4xl font-bold text-coral light:text-coral dark:text-accent">15+</p>
+                <p className="text-ink-light light:text-ink-light dark:text-slate-light font-mono text-sm mt-2">Projects Completed</p>
               </div>
-              <div className="h-16 w-px bg-accent/20" />
+              <div className="h-16 w-px bg-coral/ light:bg-coral/ dark:bg-accent/20" />
               <div className="text-center">
-                <p className="text-4xl font-bold text-accent">10+</p>
-                <p className="text-slate-light font-mono text-sm mt-2">Technologies</p>
+                <p className="text-4xl font-bold text-coral light:text-coral dark:text-accent">10+</p>
+                <p className="text-ink-light light:text-ink-light dark:text-slate-light font-mono text-sm mt-2">Technologies</p>
               </div>
             </div>
           </motion.div>

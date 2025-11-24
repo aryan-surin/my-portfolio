@@ -20,7 +20,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="py-8 px-6 md:px-12 lg:px-24 bg-navy-lighter border-t border-accent/20">
+    <footer className="py-8 px-6 md:px-12 lg:px-24 bg-cream-elevated light:bg-cream-elevated dark:bg-navy-lighter border-t border-coral/ light:border-coral/ dark:border-accent/20">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
           {/* Social Links - Hidden on mobile, shown on desktop */}
@@ -31,7 +31,7 @@ const Footer = () => {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-lightest hover:text-accent transition-colors duration-200"
+                className="text-ink-lightest light:text-ink-lightest dark:text-slate-lightest hover:text-coral light:hover:text-coral dark:hover:text-accent transition-colors duration-200"
                 aria-label={label}
               >
                 <Icon className="w-5 h-5" />
@@ -41,22 +41,22 @@ const Footer = () => {
 
           {/* Copyright & Attribution */}
           <div className="flex flex-col items-center space-y-2 text-center">
-            <p className="text-slate text-sm font-mono">
+            <p className="text-ink light:text-ink dark:text-slate text-sm font-mono">
               © {currentYear} Aryan Surin. All rights reserved.
             </p>
-            <p className="text-slate text-xs flex items-center space-x-1">
+            <p className="text-ink light:text-ink dark:text-slate text-xs flex items-center space-x-1">
               <span>Designed & Built with</span>
-              <FaHeart className="w-3 h-3 text-accent" />
+              <FaHeart className="w-3 h-3 text-coral light:text-coral dark:text-accent" />
               <span>by Aryan Surin</span>
             </p>
           </div>
 
           {/* Tech Stack Badge */}
-          <div className="flex items-center space-x-2 text-slate-light text-xs font-mono">
+          <div className="flex items-center space-x-2 text-ink-light light:text-ink-light dark:text-slate-light text-xs font-mono">
             <span>Built with</span>
-            <span className="text-accent">React</span>
+            <span className="text-coral light:text-coral dark:text-accent">React</span>
             <span>+</span>
-            <span className="text-accent">Tailwind</span>
+            <span className="text-coral light:text-coral dark:text-accent">Tailwind</span>
           </div>
         </div>
 
@@ -68,7 +68,7 @@ const Footer = () => {
               href={url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate hover:text-accent transition-colors duration-200"
+              className="text-ink light:text-ink dark:text-slate hover:text-coral light:hover:text-coral dark:hover:text-accent transition-colors duration-200"
               aria-label={label}
             >
               <Icon className="w-5 h-5" />

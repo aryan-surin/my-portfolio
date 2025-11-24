@@ -61,9 +61,9 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="section-padding bg-navy relative overflow-hidden">
+    <section id="projects" className="section-padding bg-cream light:bg-cream dark:bg-navy relative overflow-hidden">
       {/* Accent glow overlay */}
-      <div className="absolute top-1/2 right-1/3 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 right-1/3 w-96 h-96 bg-coral/ light:bg-coral/ dark:bg-accent/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-trust/5 rounded-full blur-3xl" />
 
       <div className="max-w-6xl mx-auto relative z-10">
@@ -103,20 +103,20 @@ const Projects = () => {
                     className="block relative rounded-lg overflow-hidden"
                   >
                     {/* Image Placeholder */}
-                    <div className="relative aspect-video bg-navy-lighter border border-accent/20 flex items-center justify-center shadow-card group-hover:shadow-card-hover transition-all duration-300">
+                    <div className="relative aspect-video bg-cream-elevated light:bg-cream-elevated dark:bg-navy-lighter border border-coral/ light:border-coral/ dark:border-accent/20 flex items-center justify-center shadow-light-card light:shadow-light-card dark:shadow-card group-hover:shadow-light-card-hover light:shadow-light-card-hover dark:shadow-card-hover transition-all duration-300">
                       <div className="text-center p-8">
-                        <HiCode className="w-16 h-16 text-accent/50 mx-auto mb-4" />
-                        <p className="text-slate-lightest font-mono text-sm">
+                        <HiCode className="w-16 h-16 text-coral light:text-coral dark:text-accent/50 mx-auto mb-4" />
+                        <p className="text-ink-lightest light:text-ink-lightest dark:text-slate-lightest font-mono text-sm">
                           Project Screenshot
                         </p>
-                        <p className="text-slate text-xs mt-2">
+                        <p className="text-ink light:text-ink dark:text-slate text-xs mt-2">
                           Replace with actual project image
                         </p>
                       </div>
                     </div>
                     
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-coral/ light:bg-coral/ dark:bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </a>
                 </div>
 
@@ -130,13 +130,13 @@ const Projects = () => {
                 >
                   {/* Featured Label */}
                   {project.featured && (
-                    <p className="text-slate-lightest font-mono text-sm mb-2">
+                    <p className="text-ink-lightest light:text-ink-lightest dark:text-slate-lightest font-mono text-sm mb-2">
                       Featured Project
                     </p>
                   )}
 
                   {/* Project Title */}
-                  <h3 className="text-2xl md:text-3xl font-bold text-slate-lightest mb-4 hover:text-accent transition-colors duration-200">
+                  <h3 className="text-2xl md:text-3xl font-bold text-ink-lightest light:text-ink-lightest dark:text-slate-lightest mb-4 hover:text-coral light:text-coral dark:text-accent transition-colors duration-200">
                     <a
                       href={project.liveUrl}
                       target="_blank"
@@ -147,8 +147,8 @@ const Projects = () => {
                   </h3>
 
                   {/* Project Description */}
-                  <div className="bg-navy-lighter p-6 rounded-lg shadow-card mb-4 border border-accent/10">
-                    <p className="text-slate text-base leading-relaxed">
+                  <div className="bg-cream-elevated light:bg-cream-elevated dark:bg-navy-lighter p-6 rounded-lg shadow-light-card light:shadow-light-card dark:shadow-card mb-4 border border-coral/ light:border-coral/ dark:border-accent/10">
+                    <p className="text-ink light:text-ink dark:text-slate text-base leading-relaxed">
                       {project.description}
                     </p>
                   </div>
@@ -163,7 +163,7 @@ const Projects = () => {
                       <motion.span
                         key={techIndex}
                         whileHover={{ scale: 1.05 }}
-                        className="px-3 py-1 bg-navy-lighter border border-accent/20 rounded-full text-accent hover:border-accent/40 hover:shadow-glow-sm transition-all duration-200"
+                        className="px-3 py-1 bg-cream-elevated light:bg-cream-elevated dark:bg-navy-lighter border border-coral/ light:border-coral/ dark:border-accent/20 rounded-full text-coral light:text-coral dark:text-accent hover:border-coral/ light:hover:border-coral/ dark:hover:border-accent/40 hover:shadow-light-glow-sm light:shadow-light-glow-sm dark:shadow-glow-sm transition-all duration-200"
                       >
                         {tech}
                       </motion.span>
@@ -182,7 +182,7 @@ const Projects = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-slate-lightest hover:text-accent transition-colors duration-200"
+                      className="text-ink-lightest light:text-ink-lightest dark:text-slate-lightest hover:text-coral light:text-coral dark:text-accent transition-colors duration-200"
                       aria-label="GitHub Repository"
                     >
                       <FaGithub className="w-6 h-6" />
@@ -193,7 +193,7 @@ const Projects = () => {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-slate-lightest hover:text-accent transition-colors duration-200"
+                      className="text-ink-lightest light:text-ink-lightest dark:text-slate-lightest hover:text-coral light:text-coral dark:text-accent transition-colors duration-200"
                       aria-label="Live Demo"
                     >
                       <HiExternalLink className="w-6 h-6" />
@@ -217,7 +217,7 @@ const Projects = () => {
               href="https://github.com/yourusername"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 px-6 py-3 border-2 border-accent text-accent rounded-lg hover:bg-accent/10 hover:shadow-glow-sm transition-all duration-200 font-mono"
+              className="inline-flex items-center space-x-2 px-6 py-3 border-2 border-accent text-coral light:text-coral dark:text-accent rounded-lg hover:bg-coral/ light:bg-coral/ dark:bg-accent/10 hover:shadow-light-glow-sm light:shadow-light-glow-sm dark:shadow-glow-sm transition-all duration-200 font-mono"
             >
               <FaGithub className="w-5 h-5" />
               <span>View More on GitHub</span>

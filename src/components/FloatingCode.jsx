@@ -125,7 +125,7 @@ const FloatingCode = () => {
       {codeSnippets.map((snippet, index) => (
         <div
           key={index}
-          className="code-snippet absolute pointer-events-auto cursor-pointer font-mono text-sm md:text-base font-semibold text-accent whitespace-nowrap select-none"
+          className="code-snippet absolute pointer-events-auto cursor-pointer font-mono text-sm md:text-base font-semibold text-coral light:text-coral dark:text-accent whitespace-nowrap select-none"
           style={{
             textShadow: '0 0 20px rgba(100, 255, 218, 0.4), 0 0 40px rgba(100, 255, 218, 0.2)',
           }}

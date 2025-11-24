@@ -42,7 +42,7 @@ const Loader = () => {
         
         {/* Brand initials in center */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="font-mono text-accent text-xl font-bold">
+          <span className="font-mono text-coral light:text-coral dark:text-accent text-xl font-bold">
             {'<AS />'}
           </span>
         </div>
@@ -56,7 +56,7 @@ const Loader = () => {
           repeat: Infinity, 
           ease: 'easeInOut' 
         }}
-        className="mt-6 text-slate-light font-mono text-sm"
+        className="mt-6 text-ink-light light:text-ink-light dark:text-slate-light font-mono text-sm"
       >
         Loading portfolio...
       </motion.p>

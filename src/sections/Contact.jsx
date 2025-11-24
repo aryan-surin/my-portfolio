@@ -157,9 +157,9 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-navy relative overflow-hidden">
+    <section id="contact" className="section-padding bg-cream light:bg-cream dark:bg-navy relative overflow-hidden">
       {/* Accent glow overlay */}
-      <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-coral/ light:bg-coral/ dark:bg-accent/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-1/3 w-80 h-80 bg-trust/5 rounded-full blur-3xl" />
 
       <div className="max-w-4xl mx-auto relative z-10">
@@ -183,10 +183,10 @@ const Contact = () => {
               className="space-y-8"
             >
               <div>
-                <h3 className="text-2xl font-bold text-slate-lightest mb-4">
+                <h3 className="text-2xl font-bold text-ink-lightest light:text-ink-lightest dark:text-slate-lightest mb-4">
                   Let's work together!
                 </h3>
-                <p className="text-slate text-base leading-relaxed mb-6">
+                <p className="text-ink light:text-ink dark:text-slate text-base leading-relaxed mb-6">
                   I'm currently available for freelance work and full-time opportunities. 
                   Whether you have a project in mind or just want to chat about web development, 
                   feel free to reach out!
@@ -196,12 +196,12 @@ const Contact = () => {
               {/* Contact Details */}
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
-                  <HiMail className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
+                  <HiMail className="w-6 h-6 text-coral light:text-coral dark:text-accent mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-slate-lightest font-semibold mb-1">Email</p>
+                    <p className="text-ink-lightest light:text-ink-lightest dark:text-slate-lightest font-semibold mb-1">Email</p>
                     <a
                       href="mailto:aryan.surin@example.com"
-                      className="text-slate hover:text-accent transition-colors duration-200"
+                      className="text-ink light:text-ink dark:text-slate hover:text-coral light:text-coral dark:text-accent transition-colors duration-200"
                     >
                       aryan.surin@example.com
                     </a>
@@ -209,17 +209,17 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <HiLocationMarker className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
+                  <HiLocationMarker className="w-6 h-6 text-coral light:text-coral dark:text-accent mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-slate-lightest font-semibold mb-1">Location</p>
-                    <p className="text-slate">Available for remote work</p>
+                    <p className="text-ink-lightest light:text-ink-lightest dark:text-slate-lightest font-semibold mb-1">Location</p>
+                    <p className="text-ink light:text-ink dark:text-slate">Available for remote work</p>
                   </div>
                 </div>
               </div>
 
               {/* Social Links */}
               <div>
-                <p className="text-slate-lightest font-semibold mb-4">Connect with me</p>
+                <p className="text-ink-lightest light:text-ink-lightest dark:text-slate-lightest font-semibold mb-4">Connect with me</p>
                 <div className="flex space-x-4">
                   {[
                     { Icon: FaGithub, url: 'https://github.com/yourusername', label: 'GitHub' },
@@ -234,7 +234,7 @@ const Contact = () => {
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 bg-navy-lighter border border-accent/20 rounded-lg text-slate-lightest hover:text-accent hover:border-accent/40 hover:shadow-glow-sm transition-all duration-200"
+                      className="p-3 bg-cream-elevated light:bg-cream-elevated dark:bg-navy-lighter border border-coral/ light:border-coral/ dark:border-accent/20 rounded-lg text-ink-lightest light:text-ink-lightest dark:text-slate-lightest hover:text-coral light:text-coral dark:text-accent hover:border-coral/ light:hover:border-coral/ dark:hover:border-accent/40 hover:shadow-light-glow-sm light:shadow-light-glow-sm dark:shadow-glow-sm transition-all duration-200"
                       aria-label={label}
                     >
                       <Icon className="w-5 h-5" />
@@ -253,7 +253,7 @@ const Contact = () => {
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Input */}
                 <div>
-                  <label htmlFor="name" className="block text-slate-lightest font-semibold mb-2">
+                  <label htmlFor="name" className="block text-ink-lightest light:text-ink-lightest dark:text-slate-lightest font-semibold mb-2">
                     Name *
                   </label>
                   <input
@@ -262,9 +262,9 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 bg-navy-lighter border ${
-                      errors.name ? 'border-red-500' : 'border-accent/20'
-                    } rounded-lg text-slate-lightest placeholder-slate-dark focus:outline-none focus:border-accent focus:shadow-glow-sm transition-all duration-200`}
+                    className={`w-full px-4 py-3 bg-cream-card light:bg-cream-card dark:bg-navy-lighter border ${
+                      errors.name ? 'border-red-500' : 'border-coral/ light:border-coral/ dark:border-accent/20'
+                    } rounded-lg text-ink-lightest light:text-ink-lightest dark:text-slate-lightest placeholder-ink-muted light:placeholder-ink-muted dark:placeholder-slate-dark focus:outline-none focus:border-coral light:focus:border-coral dark:focus:border-accent focus:shadow-light-glow-sm light:focus:shadow-light-glow-sm dark:focus:shadow-glow-sm transition-all duration-200`}
                     placeholder="Your name"
                   />
                   {errors.name && (
@@ -274,7 +274,7 @@ const Contact = () => {
 
                 {/* Email Input */}
                 <div>
-                  <label htmlFor="email" className="block text-slate-lightest font-semibold mb-2">
+                  <label htmlFor="email" className="block text-ink-lightest light:text-ink-lightest dark:text-slate-lightest font-semibold mb-2">
                     Email *
                   </label>
                   <input
@@ -283,9 +283,9 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 bg-navy-lighter border ${
-                      errors.email ? 'border-red-500' : 'border-accent/20'
-                    } rounded-lg text-slate-lightest placeholder-slate-dark focus:outline-none focus:border-accent focus:shadow-glow-sm transition-all duration-200`}
+                    className={`w-full px-4 py-3 bg-cream-card light:bg-cream-card dark:bg-navy-lighter border ${
+                      errors.email ? 'border-red-500' : 'border-coral/ light:border-coral/ dark:border-accent/20'
+                    } rounded-lg text-ink-lightest light:text-ink-lightest dark:text-slate-lightest placeholder-ink-muted light:placeholder-ink-muted dark:placeholder-slate-dark focus:outline-none focus:border-coral light:focus:border-coral dark:focus:border-accent focus:shadow-light-glow-sm light:focus:shadow-light-glow-sm dark:focus:shadow-glow-sm transition-all duration-200`}
                     placeholder="your.email@example.com"
                   />
                   {errors.email && (
@@ -295,7 +295,7 @@ const Contact = () => {
 
                 {/* Subject Input */}
                 <div>
-                  <label htmlFor="subject" className="block text-slate-lightest font-semibold mb-2">
+                  <label htmlFor="subject" className="block text-ink-lightest light:text-ink-lightest dark:text-slate-lightest font-semibold mb-2">
                     Subject *
                   </label>
                   <input
@@ -304,9 +304,9 @@ const Contact = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 bg-navy-lighter border ${
-                      errors.subject ? 'border-red-500' : 'border-accent/20'
-                    } rounded-lg text-slate-lightest placeholder-slate-dark focus:outline-none focus:border-accent focus:shadow-glow-sm transition-all duration-200`}
+                    className={`w-full px-4 py-3 bg-cream-card light:bg-cream-card dark:bg-navy-lighter border ${
+                      errors.subject ? 'border-red-500' : 'border-coral/ light:border-coral/ dark:border-accent/20'
+                    } rounded-lg text-ink-lightest light:text-ink-lightest dark:text-slate-lightest placeholder-ink-muted light:placeholder-ink-muted dark:placeholder-slate-dark focus:outline-none focus:border-coral light:focus:border-coral dark:focus:border-accent focus:shadow-light-glow-sm light:focus:shadow-light-glow-sm dark:focus:shadow-glow-sm transition-all duration-200`}
                     placeholder="Project inquiry"
                   />
                   {errors.subject && (
@@ -316,7 +316,7 @@ const Contact = () => {
 
                 {/* Message Input */}
                 <div>
-                  <label htmlFor="message" className="block text-slate-lightest font-semibold mb-2">
+                  <label htmlFor="message" className="block text-ink-lightest light:text-ink-lightest dark:text-slate-lightest font-semibold mb-2">
                     Message *
                   </label>
                   <textarea
@@ -325,9 +325,9 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows="5"
-                    className={`w-full px-4 py-3 bg-navy-lighter border ${
-                      errors.message ? 'border-red-500' : 'border-accent/20'
-                    } rounded-lg text-slate-lightest placeholder-slate-dark focus:outline-none focus:border-accent focus:shadow-glow-sm transition-all duration-200 resize-none`}
+                    className={`w-full px-4 py-3 bg-cream-card light:bg-cream-card dark:bg-navy-lighter border ${
+                      errors.message ? 'border-red-500' : 'border-coral/ light:border-coral/ dark:border-accent/20'
+                    } rounded-lg text-ink-lightest light:text-ink-lightest dark:text-slate-lightest placeholder-ink-muted light:placeholder-ink-muted dark:placeholder-slate-dark focus:outline-none focus:border-coral light:focus:border-coral dark:focus:border-accent focus:shadow-light-glow-sm light:focus:shadow-light-glow-sm dark:focus:shadow-glow-sm transition-all duration-200 resize-none`}
                     placeholder="Tell me about your project..."
                   />
                   {errors.message && (
@@ -341,7 +341,7 @@ const Contact = () => {
                   whileTap={{ scale: 0.98 }}
                   type="submit"
                   disabled={formStatus.loading}
-                  className="w-full px-6 py-4 bg-gradient-to-r from-trust to-trust-light text-white font-semibold rounded-lg shadow-glow-md hover:shadow-glow-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-6 py-4 bg-gradient-to-r from-trust to-trust-light text-white font-semibold rounded-lg shadow-light-glow-md light:shadow-light-glow-md dark:shadow-glow-md hover:shadow-light-glow-lg light:shadow-light-glow-lg dark:shadow-glow-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {formStatus.loading ? 'Sending...' : 'Send Message'}
                 </motion.button>

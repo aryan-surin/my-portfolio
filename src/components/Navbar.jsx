@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HiMenu, HiX } from 'react-icons/hi';
+import { HiMenu, HiX, HiSun, HiMoon } from 'react-icons/hi';
+import { useTheme } from '../context/ThemeContext';
 import { scrollToSection, getActiveSection, debounce } from '../utils/helpers';
 
 /**
@@ -14,6 +15,7 @@ import { scrollToSection, getActiveSection, debounce } from '../utils/helpers';
  * - Animated transitions with Framer Motion
  */
 const Navbar = () => {
+  const { theme, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -72,7 +74,7 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-navy/80 backdrop-blur-md shadow-glow-md border-b border-accent/10'
+          ? 'bg-cream/80 light:bg-cream/80 dark:bg-navy/80 backdrop-blur-md shadow-light-card light:shadow-light-card dark:shadow-glow-md border-b border-coral/10 light:border-coral/10 dark:border-accent/10'
           : 'bg-transparent'
       }`}
     >
@@ -85,7 +87,7 @@ const Navbar = () => {
             className="cursor-pointer"
             onClick={() => handleNavClick('home')}
           >
-            <h1 className="text-2xl font-bold text-accent font-mono">
+            <h1 className="text-2xl font-bold text-coral light:text-coral dark:text-accent font-mono">
               {'<AS />'}
             </h1>
           </motion.div>
@@ -101,12 +103,12 @@ const Navbar = () => {
                 onClick={() => handleNavClick(link.id)}
                 className={`group flex items-center space-x-1 transition-colors duration-200 ${
                   activeSection === link.id
-                    ? 'text-accent'
-                    : 'text-slate hover:text-accent'
+                    ? 'text-coral light:text-coral dark:text-accent'
+                    : 'text-ink light:text-ink dark:text-slate hover:text-coral light:hover:text-coral dark:hover:text-accent'
                 }`}
               >
-                <span className="text-accent text-sm font-mono">{link.number}.</span>
-                <span className="text-sm font-medium text-slate-lightest">{link.label}</span>
+                <span className="text-coral light:text-coral dark:text-accent text-sm font-mono">{link.number}.</span>
+                <span className="text-sm font-medium text-ink-lightest light:text-ink-lightest dark:text-slate-lightest">{link.label}</span>
               </motion.button>
             ))}
 
@@ -117,10 +119,25 @@ const Navbar = () => {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 border border-accent text-accent rounded hover:bg-accent/10 transition-all duration-200 text-sm font-mono"
+              className="px-4 py-2 border border-accent dark:border-accent light:border-coral text-coral light:text-coral dark:text-accent dark:text-accent light:text-coral rounded hover:bg-coral/ light:bg-coral/ dark:bg-accent/10 dark:hover:bg-accent/10 light:hover:bg-coral/10 transition-all duration-200 text-sm font-mono"
             >
               Resume
             </motion.a>
+
+            {/* Theme Toggle Button */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={toggleTheme}
+              className="p-2 border border-coral/ light:border-coral/ dark:border-accent/30 dark:border-accent/30 light:border-coral/30 text-coral light:text-coral dark:text-accent dark:text-accent light:text-coral rounded hover:bg-coral/ light:bg-coral/ dark:bg-accent/10 dark:hover:bg-accent/10 light:hover:bg-coral/10 transition-all duration-200"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? (
+                <HiSun className="w-5 h-5" />
+              ) : (
+                <HiMoon className="w-5 h-5" />
+              )}
+            </motion.button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -128,7 +145,7 @@ const Navbar = () => {
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-slate-lightest p-2 hover:bg-navy-light:bg-navy-light hover:rounded-lg transition-colors"
+              className="text-ink-lightest light:text-ink-lightest dark:text-ink-lightest light:text-ink-lightest dark:text-slate-lightest p-2 hover:bg-coral/10 light:hover:bg-coral/10 dark:hover:bg-navy-light hover:rounded-lg transition-colors"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (
@@ -149,7 +166,7 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed inset-0 top-20 bg-navy/95 backdrop-blur-md md:hidden"
+            className="fixed inset-0 top-20 bg-cream/95 light:bg-cream/95 dark:bg-navy/95 backdrop-blur-md md:hidden"
           >
             <div className="flex flex-col items-center justify-center h-full space-y-8">
               {navLinks.map((link, index) => (
@@ -161,12 +178,12 @@ const Navbar = () => {
                   onClick={() => handleNavClick(link.id)}
                   className={`flex flex-col items-center space-y-1 ${
                     activeSection === link.id
-                      ? 'text-accent'
-                      : 'text-slate hover:text-accent'
+                      ? 'text-coral light:text-coral dark:text-accent'
+                      : 'text-ink light:text-ink dark:text-slate hover:text-coral light:hover:text-coral dark:hover:text-accent'
                   } transition-colors duration-200`}
                 >
-                  <span className="text-slate-lightest text-sm font-mono">{link.number}.</span>
-                  <span className="text-2xl font-medium text-slate-lightest">{link.label}</span>
+                  <span className="text-coral light:text-coral dark:text-coral light:text-coral dark:text-accent text-sm font-mono">{link.number}.</span>
+                  <span className="text-2xl font-medium text-ink-lightest light:text-ink-lightest dark:text-ink-lightest light:text-ink-lightest dark:text-slate-lightest">{link.label}</span>
                 </motion.button>
               ))}
               
@@ -177,7 +194,7 @@ const Navbar = () => {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 border-2 border-accent text-slate-lightest rounded hover:bg-accent/10:bg-accent/10 transition-all duration-200 text-lg font-mono mt-4"
+                className="px-6 py-3 border-2 border-coral light:border-coral dark:border-accent text-coral light:text-coral dark:text-coral light:text-coral dark:text-accent rounded hover:bg-coral/10 light:hover:bg-coral/10 dark:hover:bg-coral/ light:bg-coral/ dark:bg-accent/10 transition-all duration-200 text-lg font-mono mt-4"
               >
                 Resume
               </motion.a>

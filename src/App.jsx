@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Loader from './components/Loader';
@@ -42,12 +43,13 @@ function App() {
   }, []);
 
   return (
-    <AnimatePresence mode="wait">
-      {isLoading ? (
-        <Loader key="loader" />
-      ) : (
-        <div key="content" className="min-h-screen bg-navy text-slate-lightest">
-            {/* Navigation */}
+    <ThemeProvider>
+      <AnimatePresence mode="wait">
+        {isLoading ? (
+          <Loader key="loader" />
+        ) : (
+          <div key="content" className="min-h-screen bg-cream light:bg-cream dark:bg-navy text-ink-lightest light:text-ink-lightest dark:text-slate-lightest transition-colors duration-300">
+              {/* Navigation */}
             <Navbar />
             
             {/* Main Content */}
@@ -68,6 +70,7 @@ function App() {
         </div>
       )}
     </AnimatePresence>
+    </ThemeProvider>
   );
 }
 
