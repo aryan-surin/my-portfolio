@@ -140,12 +140,28 @@ const Navbar = () => {
             </motion.button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          {/* Mobile Menu Button & Theme Toggle */}
+          <div className="md:hidden flex items-center gap-3">
+            {/* Theme Toggle Button - Mobile */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={toggleTheme}
+              className="p-2 border border-coral/ light:border-coral/ dark:border-accent/30 text-coral light:text-coral dark:text-accent rounded hover:bg-coral/10 light:hover:bg-coral/10 dark:hover:bg-accent/10 transition-all duration-200"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? (
+                <HiSun className="w-5 h-5" />
+              ) : (
+                <HiMoon className="w-5 h-5" />
+              )}
+            </motion.button>
+
+            {/* Hamburger Menu Button */}
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-ink-lightest light:text-ink-lightest dark:text-ink-lightest light:text-ink-lightest dark:text-slate-lightest p-2 hover:bg-coral/10 light:hover:bg-coral/10 dark:hover:bg-navy-light hover:rounded-lg transition-colors"
+              className="text-ink-lightest light:text-ink-lightest dark:text-slate-lightest p-2 hover:bg-coral/10 light:hover:bg-coral/10 dark:hover:bg-navy-light hover:rounded-lg transition-colors"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (
@@ -158,7 +174,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Full screen overlay */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -166,9 +182,22 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed inset-0 top-20 bg-cream/95 light:bg-cream/95 dark:bg-navy/95 backdrop-blur-md md:hidden"
+            className="fixed inset-0 z-[100] bg-white light:bg-white dark:bg-navy md:hidden overflow-y-auto"
+            style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, height: '100vh', width: '100vw' }}
           >
-            <div className="flex flex-col items-center justify-center h-full space-y-8">
+            {/* Close button at top */}
+            <div className="flex justify-end p-6 sticky top-0 bg-white/95 light:bg-white/95 dark:bg-navy/95 backdrop-blur-sm z-10">
+              <motion.button
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setIsMenuOpen(false)}
+                className="text-gray-900 light:text-gray-900 dark:text-slate-lightest p-3 hover:bg-coral/10 light:hover:bg-coral/10 dark:hover:bg-accent/10 rounded-lg transition-colors border border-gray-300 light:border-gray-300 dark:border-accent/30"
+                aria-label="Close menu"
+              >
+                <HiX className="w-6 h-6" />
+              </motion.button>
+            </div>
+
+            <div className="flex flex-col items-center justify-center min-h-[calc(100vh-100px)] space-y-10 px-6">
               {navLinks.map((link, index) => (
                 <motion.button
                   key={link.id}
@@ -176,14 +205,14 @@ const Navbar = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                   onClick={() => handleNavClick(link.id)}
-                  className={`flex flex-col items-center space-y-1 ${
+                  className="flex flex-col items-center space-y-2 w-full py-3"
+                >
+                  <span className="text-coral light:text-coral dark:text-accent text-base font-mono font-semibold">{link.number}.</span>
+                  <span className={`text-3xl font-bold ${
                     activeSection === link.id
                       ? 'text-coral light:text-coral dark:text-accent'
-                      : 'text-ink light:text-ink dark:text-slate hover:text-coral light:hover:text-coral dark:hover:text-accent'
-                  } transition-colors duration-200`}
-                >
-                  <span className="text-coral light:text-coral dark:text-coral light:text-coral dark:text-accent text-sm font-mono">{link.number}.</span>
-                  <span className="text-2xl font-medium text-ink-lightest light:text-ink-lightest dark:text-ink-lightest light:text-ink-lightest dark:text-slate-lightest">{link.label}</span>
+                      : 'text-gray-900 light:text-gray-900 dark:text-slate-lightest hover:text-coral light:hover:text-coral dark:hover:text-accent'
+                  } transition-colors duration-200`}>{link.label}</span>
                 </motion.button>
               ))}
               
@@ -194,7 +223,7 @@ const Navbar = () => {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 border-2 border-coral light:border-coral dark:border-accent text-coral light:text-coral dark:text-coral light:text-coral dark:text-accent rounded hover:bg-coral/10 light:hover:bg-coral/10 dark:hover:bg-coral/ light:bg-coral/ dark:bg-accent/10 transition-all duration-200 text-lg font-mono mt-4"
+                className="px-8 py-4 border-2 border-coral light:border-coral dark:border-accent text-coral light:text-coral dark:text-accent font-semibold rounded-lg hover:bg-coral/10 light:hover:bg-coral/10 dark:hover:bg-accent/10 transition-all duration-200 text-xl font-mono mt-6"
               >
                 Resume
               </motion.a>
