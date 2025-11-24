@@ -27,11 +27,9 @@ export const ThemeProvider = ({ children }) => {
     const savedTheme = localStorage.getItem('portfolio-theme');
     if (savedTheme) return savedTheme;
 
-    // Fall back to system preference
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
-    return 'light';
+    // Always default to dark mode (teal theme)
+    // This ensures every new visitor sees the premium dark mode first
+    return 'dark';
   });
 
   useEffect(() => {
