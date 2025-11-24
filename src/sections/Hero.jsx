@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { HiArrowDown } from 'react-icons/hi';
 import { scrollToSection } from '../utils/helpers';
+import FloatingCode from '../components/FloatingCode';
 
 /**
  * Hero Section Component
@@ -155,6 +156,9 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </motion.div>
+
+      {/* Floating Code Snippets - GSAP Animation */}
+      <FloatingCode />
 
       {/* Decorative Background Elements - Trust-building gradients */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
