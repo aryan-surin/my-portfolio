@@ -116,7 +116,7 @@ const Navbar = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/resume.pdf"
+              href="/projects/aryan-surin-CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 border border-accent dark:border-accent light:border-coral text-coral light:text-coral dark:text-accent dark:text-accent light:text-coral rounded hover:bg-coral/ light:bg-coral/ dark:bg-accent/10 dark:hover:bg-accent/10 light:hover:bg-coral/10 transition-all duration-200 text-sm font-mono"
@@ -220,7 +220,7 @@ const Navbar = () => {
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: navLinks.length * 0.1 }}
-                href="/resume.pdf"
+                href="/projects/aryan-surin-CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 border-2 border-coral light:border-coral dark:border-accent text-coral light:text-coral dark:text-accent font-semibold rounded-lg hover:bg-coral/10 light:hover:bg-coral/10 dark:hover:bg-accent/10 transition-all duration-200 text-xl font-mono mt-6"

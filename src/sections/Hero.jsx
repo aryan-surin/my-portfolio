@@ -139,6 +139,25 @@ const Hero = () => {
               </motion.span>
             </span>
           </motion.button>
+
+          {/* Resume CTA */}
+          <motion.a
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            href="/projects/aryan-surin-CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 border-2 border-coral light:border-coral dark:border-accent text-coral light:text-coral dark:text-accent font-semibold rounded-lg hover:bg-coral/10 light:hover:bg-coral/10 dark:hover:bg-accent/10 hover:shadow-light-glow-sm light:shadow-light-glow-sm dark:shadow-glow-sm transition-all duration-300 group relative overflow-hidden flex items-center justify-center gap-2"
+          >
+            <span className="relative z-10">View Resume</span>
+            <motion.span
+              initial={{ y: 0 }}
+              whileHover={{ y: -2 }}
+              className="inline-block"
+            >
+              📄
+            </motion.span>
+          </motion.a>
         </motion.div>
 
         {/* Scroll Indicator */}
