@@ -221,7 +221,7 @@ const Projects = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="https://github.com/yourusername"
+              href="https://github.com/aryan-surin"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 px-6 py-3 border-2 border-accent text-coral light:text-coral dark:text-accent rounded-lg hover:bg-coral/ light:bg-coral/ dark:bg-accent/10 hover:shadow-light-glow-sm light:shadow-light-glow-sm dark:shadow-glow-sm transition-all duration-200 font-mono"

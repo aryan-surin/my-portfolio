@@ -200,10 +200,23 @@ const Contact = () => {
                   <div>
                     <p className="text-ink-lightest light:text-ink-lightest dark:text-slate-lightest font-semibold mb-1">Email</p>
                     <a
-                      href="mailto:aryan.surin@example.com"
+                      href="mailto:aryansurin21@gmail.com"
                       className="text-ink light:text-ink dark:text-slate hover:text-coral light:text-coral dark:text-accent transition-colors duration-200"
                     >
-                      aryan.surin@example.com
+                      aryansurin21@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <HiMail className="w-6 h-6 text-coral light:text-coral dark:text-accent mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-ink-lightest light:text-ink-lightest dark:text-slate-lightest font-semibold mb-1">Phone / WhatsApp</p>
+                    <a
+                      href="tel:+918927470571"
+                      className="text-ink light:text-ink dark:text-slate hover:text-coral light:text-coral dark:text-accent transition-colors duration-200"
+                    >
+                      +91 8927470571
                     </a>
                   </div>
                 </div>
@@ -222,10 +235,9 @@ const Contact = () => {
                 <p className="text-ink-lightest light:text-ink-lightest dark:text-slate-lightest font-semibold mb-4">Connect with me</p>
                 <div className="flex space-x-4">
                   {[
-                    { Icon: FaGithub, url: 'https://github.com/yourusername', label: 'GitHub' },
-                    { Icon: FaLinkedin, url: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
-                    { Icon: FaTwitter, url: 'https://twitter.com/yourusername', label: 'Twitter' },
-                    { Icon: FaCodepen, url: 'https://codepen.io/yourusername', label: 'CodePen' },
+                    { Icon: FaGithub, url: 'https://github.com/aryan-surin', label: 'GitHub' },
+                    { Icon: FaLinkedin, url: 'https://linkedin.com/in/aryansurin', label: 'LinkedIn' },
+                    { Icon: FaTwitter, url: 'https://x.com/_aryansurin_', label: 'Twitter' },
                   ].map(({ Icon, url, label }) => (
                     <motion.a
                       key={label}

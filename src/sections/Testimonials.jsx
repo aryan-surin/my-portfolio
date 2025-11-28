@@ -160,7 +160,7 @@ const Testimonials = () => {
         >
           <div className="inline-flex items-center gap-8">
             <div className="flex flex-col items-center">
-              <span className="text-3xl font-bold text-coral light:text-coral dark:text-accent">50+</span>
+              <span className="text-3xl font-bold text-coral light:text-coral dark:text-accent">20+</span>
               <span className="text-sm text-ink-light light:text-ink-light dark:text-slate-light">Projects Completed</span>
             </div>
             <div className="w-px h-12 bg-coral/ light:bg-coral/ dark:bg-accent/20"></div>
@@ -170,7 +170,7 @@ const Testimonials = () => {
             </div>
             <div className="w-px h-12 bg-coral/ light:bg-coral/ dark:bg-accent/20"></div>
             <div className="flex flex-col items-center">
-              <span className="text-3xl font-bold text-coral light:text-coral dark:text-accent">5+ Years</span>
+              <span className="text-3xl font-bold text-coral light:text-coral dark:text-accent">4+ Years</span>
               <span className="text-sm text-ink-light light:text-ink-light dark:text-slate-light">Experience</span>
             </div>
           </div>
