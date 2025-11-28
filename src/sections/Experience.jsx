@@ -56,8 +56,8 @@ const Experience = () => {
       duration: 'May 2022 - Jul 2022',
       location: 'Internship • Remote',
       responsibilities: [
-        'Transformed complex Figma designs into production-quality, responsive Vue.js and Nuxt.js interfaces for multiple client projects, ensuring pixel-perfect implementation and design fidelity',
-        'Developed modular UI components and reusable modules for diverse client projects spanning e-commerce, SaaS platforms, and corporate websites, demonstrating versatility across different business domains',
+        'Transformed complex Figma designs into production-quality, responsive interfaces using Vue.js, Nuxt.js, and React for multiple client projects, ensuring pixel-perfect implementation and design fidelity across different frameworks',
+        'Developed modular UI components and reusable modules across Vue, Nuxt, and React ecosystems for diverse client projects spanning e-commerce, SaaS platforms, and corporate websites, demonstrating versatility across different business domains and technology stacks',
         'Ensured comprehensive cross-browser compatibility through rigorous testing and debugging across multiple devices and screen sizes, achieving 100% functionality across all major browsers',
         'Collaborated with international clients and development teams using Agile methodologies, participating in daily standups, sprint planning, and retrospectives to deliver features on tight deadlines',
         'Implemented responsive design patterns using modern CSS frameworks and preprocessors (SCSS, Tailwind CSS), creating mobile-first interfaces that improved mobile conversion rates for client projects',
