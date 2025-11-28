@@ -58,10 +58,10 @@ const About = () => {
                 className="text-ink light:text-ink dark:text-slate text-base md:text-lg leading-relaxed"
               >
                 Hello! I'm <span className="text-coral light:text-coral dark:text-accent font-semibold">Aryan Surin</span>, 
-                a passionate Full Stack Developer with a strong focus on frontend development. 
-                My journey in web development began over 3.5 years ago, and I've been captivated 
-                by the endless possibilities of creating intuitive and visually stunning user 
-                interfaces ever since.
+                a self-driven Frontend Developer who builds fast, clean, and scalable user interfaces. 
+                My journey in web development began over <span className="text-coral light:text-coral dark:text-accent font-semibold">3+ years ago</span> as a 
+                <span className="text-coral light:text-coral dark:text-accent font-semibold"> self-taught developer</span>—I learned by building, not just studying. 
+                I've been captivated by the craft of creating intuitive, visually stunning, and highly performant web experiences ever since.
               </motion.p>
 
               <motion.p
@@ -70,12 +70,11 @@ const About = () => {
                 transition={{ delay: 0.3, duration: 0.6 }}
                 className="text-ink light:text-ink dark:text-slate text-base md:text-lg leading-relaxed"
               >
-                I specialize in building exceptional digital experiences using modern technologies 
-                like <span className="text-coral light:text-coral dark:text-accent font-semibold">React</span>, 
-                <span className="text-coral light:text-coral dark:text-accent font-semibold"> Vue.js</span>, and 
-                <span className="text-coral light:text-coral dark:text-accent font-semibold"> Nuxt.js</span>. I'm particularly 
-                passionate about creating responsive, accessible, and performant web applications 
-                that deliver seamless user experiences across all devices.
+                Throughout my career, I've worked on <span className="text-coral light:text-coral dark:text-accent font-semibold">real production projects</span>—refactoring 
+                legacy systems, shipping features used by thousands of users, integrating <span className="text-coral light:text-coral dark:text-accent font-semibold">REST & GraphQL APIs</span>, 
+                and optimizing UI performance across multiple applications. I specialize in modern frameworks like 
+                <span className="text-coral light:text-coral dark:text-accent font-semibold"> Nuxt.js, Vue.js, and React</span>, focusing on building 
+                responsive, accessible, and high-performance interfaces that deliver seamless experiences across all devices.
               </motion.p>
 
               <motion.p
@@ -84,10 +83,10 @@ const About = () => {
                 transition={{ delay: 0.4, duration: 0.6 }}
                 className="text-ink light:text-ink dark:text-slate text-base md:text-lg leading-relaxed"
               >
-                When I'm not coding, you'll find me exploring new web technologies, contributing 
-                to open-source projects, or sharing my knowledge with the developer community. 
-                I'm always eager to take on new challenges and collaborate on exciting projects 
-                that push the boundaries of what's possible on the web.
+                I enjoy solving problems through <span className="text-coral light:text-coral dark:text-accent font-semibold">clear UI thinking, debugging, and writing 
+                maintainable, modern frontend code</span>. Whether it's implementing pixel-perfect designs, handling complex state 
+                management, or improving Core Web Vitals, I approach every challenge with curiosity and precision. When I'm not coding, 
+                you'll find me exploring new web technologies, contributing to open-source projects, or sharing knowledge with the developer community.
               </motion.p>
 
               <motion.div
@@ -128,7 +127,7 @@ const About = () => {
                 <div className="relative z-10 rounded-lg overflow-hidden bg-cream-elevated light:bg-cream-elevated dark:bg-navy-lighter border-2 border-coral/ light:border-coral/ dark:border-accent/30 shadow-light-card light:shadow-light-card dark:shadow-card group-hover:border-accent group-hover:shadow-light-card-hover light:shadow-light-card-hover dark:shadow-card-hover transition-all duration-300">
                   <img
                     src="/portfolio-image.jpg"
-                    alt="Aryan Surin - Full Stack Developer"
+                    alt="Aryan Surin - Frontend Developer"
                     className="w-full h-full object-cover"
                   />
                   

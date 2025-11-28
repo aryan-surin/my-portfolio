@@ -83,11 +83,10 @@ const Hero = () => {
           variants={itemVariants}
           className="text-ink light:text-ink dark:text-slate max-w-2xl text-base md:text-lg leading-relaxed mb-8"
         >
-          I'm a <span className="text-coral light:text-coral dark:text-accent font-semibold">Full Stack Developer</span> specializing 
-          in <span className="text-coral light:text-coral dark:text-accent font-semibold">Frontend Development</span>, with over 3 
-          years of experience crafting beautiful, responsive, and user-centric web applications. 
-          Currently focused on building accessible, performant products using modern technologies 
-          like React, Vue, and Next.js.
+          I'm a <span className="text-coral light:text-coral dark:text-accent font-semibold">self-driven Frontend Developer</span> specializing 
+          in building fast, clean, and scalable user interfaces. With <span className="text-coral light:text-coral dark:text-accent font-semibold">3+ years of real production experience</span>, 
+          I focus on crafting responsive, accessible, and high-performance web experiences using modern frameworks 
+          like <span className="text-coral light:text-coral dark:text-accent font-semibold">Nuxt, Vue, and React</span>.
         </motion.p>
 
         {/* CTA Buttons - Trust-building colors with micro-interactions */}
