@@ -59,7 +59,7 @@ const About = () => {
               >
                 Hello! I'm <span className="text-coral light:text-coral dark:text-accent font-semibold">Aryan Surin</span>, 
                 a passionate Full Stack Developer with a strong focus on frontend development. 
-                My journey in web development began over 3 years ago, and I've been captivated 
+                My journey in web development began over 3.5 years ago, and I've been captivated 
                 by the endless possibilities of creating intuitive and visually stunning user 
                 interfaces ever since.
               </motion.p>
