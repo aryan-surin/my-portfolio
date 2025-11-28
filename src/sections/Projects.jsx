@@ -19,44 +19,53 @@ const Projects = () => {
 
   /**
    * Projects data structure
-   * TODO: Replace with your actual projects
+   * Real freelance projects showcasing full-stack development expertise
    */
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A modern, full-featured e-commerce platform with real-time inventory management, secure payment integration, and an intuitive admin dashboard. Built with React and Node.js, featuring advanced search, filtering, and responsive design.',
-      image: '/project1.jpg', // Replace with actual image path
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com/yourusername/project1',
+      title: 'Nishkalanka Mata English School',
+      description: 'Comprehensive school management website with an advanced online admission portal system integrated with Supabase backend. Features dynamic announcements, news management, events calendar, gallery system, and secure document submission workflow. Built from scratch with modern SEO optimization and mobile-first responsive design serving 500+ students and parents.',
+      image: '/project1.jpg', // Replace with actual screenshot
+      tech: ['Nuxt.js', 'Vue.js', 'Supabase', 'Tailwind CSS', 'TypeScript'],
+      liveUrl: 'https://nishkalankamataenglish.school/',
+      githubUrl: null,
       featured: true,
     },
     {
-      title: 'Social Media Dashboard',
-      description: 'Analytics dashboard for social media managers to track engagement metrics across multiple platforms. Features real-time data visualization, customizable reports, and automated insights using Vue.js and Chart.js.',
-      image: '/project2.jpg', // Replace with actual image path
-      tech: ['Vue.js', 'Nuxt.js', 'Firebase', 'Chart.js', 'SCSS'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com/yourusername/project2',
+      title: 'Thapa Construction',
+      description: 'Full-featured construction company website with custom admin panel for project portfolio management connected to Supabase. Includes dynamic project showcase with image galleries, service pages, client testimonials, contact forms with automated email notifications, and SEO-optimized content. The admin panel enables real-time content updates without developer intervention.',
+      image: '/project2.jpg', // Replace with actual screenshot
+      tech: ['Nuxt.js', 'Vue.js', 'Supabase', 'SCSS', 'Pinia'],
+      liveUrl: 'https://www.thapaconstruction.com/',
+      githubUrl: null,
       featured: true,
     },
     {
-      title: 'Task Management App',
-      description: 'Collaborative task management application with drag-and-drop functionality, real-time updates, team collaboration features, and progress tracking. Built with React, featuring offline support and mobile responsiveness.',
-      image: '/project3.jpg', // Replace with actual image path
-      tech: ['React', 'TypeScript', 'Supabase', 'DnD Kit', 'Bootstrap'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com/yourusername/project3',
+      title: 'Saint Teresa\'s Girls\' High School',
+      description: 'Modern, elegant school website for a prestigious Darjeeling institution featuring responsive design, admission information system, photo gallery with lightbox functionality, faculty profiles, and interactive contact forms. Implemented with performance optimization achieving 95+ Lighthouse scores and cross-browser compatibility ensuring seamless experience across all devices.',
+      image: '/project3.jpg', // Replace with actual screenshot
+      tech: ['Nuxt.js', 'Vue.js', 'Tailwind CSS', 'SCSS'],
+      liveUrl: 'https://saintteresaschooldarj.co.in/',
+      githubUrl: null,
       featured: false,
     },
     {
-      title: 'Weather Forecast App',
-      description: 'Beautiful weather application providing accurate forecasts, historical data, and interactive weather maps. Features location-based weather, severe weather alerts, and a clean, intuitive interface built with React.',
-      image: '/project4.jpg', // Replace with actual image path
-      tech: ['React', 'OpenWeather API', 'Mapbox', 'Tailwind CSS'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com/yourusername/project4',
+      title: 'Revival Gel Church',
+      description: 'Beautiful, spiritually-focused church website featuring sermon archives, event management system, Bible study resources with custom highlighting guide, community gallery, prayer request forms, and donation integration. Built with accessibility-first approach (WCAG 2.1 compliant) and optimized for fast loading on all network conditions to serve the global faith community.',
+      image: '/project4.jpg', // Replace with actual screenshot
+      tech: ['Nuxt.js', 'Vue.js', 'Tailwind CSS', 'TypeScript'],
+      liveUrl: 'https://www.revivalgelchurch.com/',
+      githubUrl: null,
       featured: false,
+    },
+    {
+      title: 'Personal Portfolio',
+      description: 'Modern, interactive developer portfolio built with React showcasing professional experience, projects, and technical skills. Features smooth GSAP animations, dark/light theme toggle with system preference detection, responsive design with mobile-first approach, and optimized performance with code splitting. Demonstrates mastery of modern React ecosystem and UI/UX best practices.',
+      image: '/project5.jpg', // Replace with actual screenshot
+      tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'GSAP'],
+      liveUrl: 'https://aryansurin.vercel.app/',
+      githubUrl: null,
+      featured: true,
     },
   ];
 
@@ -176,17 +185,19 @@ const Projects = () => {
                       index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'
                     }`}
                   >
-                    <motion.a
-                      whileHover={{ scale: 1.1, y: -2 }}
-                      whileTap={{ scale: 0.95 }}
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-ink-lightest light:text-ink-lightest dark:text-slate-lightest hover:text-coral light:text-coral dark:text-accent transition-colors duration-200"
-                      aria-label="GitHub Repository"
-                    >
-                      <FaGithub className="w-6 h-6" />
-                    </motion.a>
+                    {project.githubUrl && (
+                      <motion.a
+                        whileHover={{ scale: 1.1, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-ink-lightest light:text-ink-lightest dark:text-slate-lightest hover:text-coral light:text-coral dark:text-accent transition-colors duration-200"
+                        aria-label="GitHub Repository"
+                      >
+                        <FaGithub className="w-6 h-6" />
+                      </motion.a>
+                    )}
                     <motion.a
                       whileHover={{ scale: 1.1, y: -2 }}
                       whileTap={{ scale: 0.95 }}
