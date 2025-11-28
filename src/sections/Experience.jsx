@@ -17,49 +17,50 @@ const Experience = () => {
 
   /**
    * Experience data structure
-   * TODO: Replace with your actual work experience
+   * Real work experience showcasing frontend development expertise
    */
   const experiences = [
     {
-      role: 'Senior Frontend Developer',
-      company: 'Tech Innovations Inc.',
-      companyUrl: 'https://example.com',
-      duration: 'Jan 2023 - Present',
-      location: 'Remote',
+      role: 'Frontend Developer',
+      company: 'DeepSell (Augmented SCM Pvt Ltd)',
+      companyUrl: 'https://deepsell.today/',
+      duration: 'Dec 2022 - Dec 2025',
+      location: 'Contract • Remote',
       responsibilities: [
-        'Architected and developed 15+ responsive web applications using React.js and Vue.js, improving user engagement by 40%',
-        'Led frontend development team of 4 developers, implementing best practices and code review standards',
-        'Optimized application performance resulting in 60% faster load times and improved Core Web Vitals scores',
-        'Collaborated with UX/UI designers to implement pixel-perfect, accessible interfaces using Tailwind CSS and SCSS',
-        'Integrated GraphQL APIs and Supabase backend services, reducing API call overhead by 35%',
+        'Spearheaded the frontend development of core product features for a fast-moving AI-commerce startup, architecting scalable solutions using Nuxt.js and Vue.js that serve thousands of users daily',
+        'Engineered 20+ production-ready reusable Vue/Nuxt components with advanced state management (Vuex, Pinia), improving development velocity by 45% and ensuring consistent UI/UX across the entire application ecosystem',
+        'Integrated multiple REST & GraphQL APIs with optimized data fetching strategies, implementing intelligent caching mechanisms that improved page load performance by 28% and reduced server costs',
+        'Reduced API response failures by 40% through implementing comprehensive error handling, retry logic, and fallback mechanisms, significantly enhancing application reliability and user satisfaction',
+        'Collaborated closely with cross-functional teams including backend engineers, product managers, and UX designers to deliver pixel-perfect, responsive interfaces that exceeded accessibility standards (WCAG 2.1 AA)',
+        'Championed modern frontend best practices including TypeScript integration, atomic design principles, lazy loading strategies, and progressive web app (PWA) capabilities for offline-first experiences',
       ],
     },
     {
       role: 'Frontend Developer',
-      company: 'Digital Solutions Ltd.',
-      companyUrl: 'https://example.com',
-      duration: 'Jun 2021 - Dec 2022',
-      location: 'Hybrid',
+      company: 'DeepSell (Augmented SCM Pvt Ltd)',
+      companyUrl: 'https://deepsell.today/',
+      duration: 'Jun 2022 - Nov 2022',
+      location: 'Internship • Remote',
       responsibilities: [
-        'Developed and maintained 20+ client-facing web applications using React, Vue.js, and Nuxt.js',
-        'Implemented responsive designs with Bootstrap and Tailwind CSS, ensuring cross-browser compatibility',
-        'Built reusable component libraries that reduced development time by 30%',
-        'Worked closely with backend developers to integrate RESTful APIs and optimize data fetching strategies',
-        'Participated in agile ceremonies and contributed to sprint planning and retrospectives',
+        'Built core UI components used across production features in an AI-powered e-commerce platform, demonstrating ownership and attention to detail that led to conversion from intern to contract developer',
+        'Architected and implemented RESTful API integrations, writing robust utility functions for data transformation, validation, and error handling that became part of the core codebase',
+        'Engineered responsive layouts and interactive UI elements ensuring cross-browser compatibility (Chrome, Firefox, Safari, Edge) and mobile-first design principles for optimal user experiences',
+        'Improved layout structures and component reusability by refactoring legacy code, reducing bundle size by 22% and improving First Contentful Paint (FCP) metrics by 35%',
+        'Actively participated in code reviews and agile ceremonies, contributing technical insights and learning advanced patterns from senior developers in a fast-paced startup environment',
       ],
     },
     {
-      role: 'Junior Web Developer',
-      company: 'StartUp Ventures',
-      companyUrl: 'https://example.com',
-      duration: 'Mar 2021 - May 2021',
-      location: 'On-site',
+      role: 'Frontend Web Developer',
+      company: 'MarsDevs',
+      companyUrl: 'https://www.marsdevs.com/',
+      duration: 'May 2022 - Jul 2022',
+      location: 'Internship • Remote',
       responsibilities: [
-        'Assisted in developing and debugging frontend features for company web applications',
-        'Implemented UI components using JavaScript, HTML5, and CSS3',
-        'Collaborated with senior developers to learn best practices and coding standards',
-        'Conducted code reviews and participated in team knowledge-sharing sessions',
-        'Maintained documentation for frontend codebase and component library',
+        'Transformed complex Figma designs into production-quality, responsive Vue.js and Nuxt.js interfaces for multiple client projects, ensuring pixel-perfect implementation and design fidelity',
+        'Developed modular UI components and reusable modules for diverse client projects spanning e-commerce, SaaS platforms, and corporate websites, demonstrating versatility across different business domains',
+        'Ensured comprehensive cross-browser compatibility through rigorous testing and debugging across multiple devices and screen sizes, achieving 100% functionality across all major browsers',
+        'Collaborated with international clients and development teams using Agile methodologies, participating in daily standups, sprint planning, and retrospectives to deliver features on tight deadlines',
+        'Implemented responsive design patterns using modern CSS frameworks and preprocessors (SCSS, Tailwind CSS), creating mobile-first interfaces that improved mobile conversion rates for client projects',
       ],
     },
   ];
@@ -161,17 +162,17 @@ const Experience = () => {
           >
             <div className="flex items-center justify-center space-x-4">
               <div className="text-center">
-                <p className="text-4xl font-bold text-coral light:text-coral dark:text-accent">3.9+</p>
+                <p className="text-4xl font-bold text-coral light:text-coral dark:text-accent">3.5+</p>
                 <p className="text-ink-light light:text-ink-light dark:text-slate-light font-mono text-sm mt-2">Years Experience</p>
               </div>
               <div className="h-16 w-px bg-coral/ light:bg-coral/ dark:bg-accent/20" />
               <div className="text-center">
-                <p className="text-4xl font-bold text-coral light:text-coral dark:text-accent">15+</p>
+                <p className="text-4xl font-bold text-coral light:text-coral dark:text-accent">25+</p>
                 <p className="text-ink-light light:text-ink-light dark:text-slate-light font-mono text-sm mt-2">Projects Completed</p>
               </div>
               <div className="h-16 w-px bg-coral/ light:bg-coral/ dark:bg-accent/20" />
               <div className="text-center">
-                <p className="text-4xl font-bold text-coral light:text-coral dark:text-accent">10+</p>
+                <p className="text-4xl font-bold text-coral light:text-coral dark:text-accent">15+</p>
                 <p className="text-ink-light light:text-ink-light dark:text-slate-light font-mono text-sm mt-2">Technologies</p>
               </div>
             </div>
