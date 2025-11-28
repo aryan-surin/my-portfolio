@@ -126,19 +126,11 @@ const About = () => {
               <div className="relative w-full aspect-square max-w-xs mx-auto">
                 {/* Image Container */}
                 <div className="relative z-10 rounded-lg overflow-hidden bg-cream-elevated light:bg-cream-elevated dark:bg-navy-lighter border-2 border-coral/ light:border-coral/ dark:border-accent/30 shadow-light-card light:shadow-light-card dark:shadow-card group-hover:border-accent group-hover:shadow-light-card-hover light:shadow-light-card-hover dark:shadow-card-hover transition-all duration-300">
-                  <div className="w-full h-full bg-gradient-to-br from-accent/10 to-trust/10 flex items-center justify-center">
-                    <div className="text-center p-6">
-                      <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-coral/ light:bg-coral/ dark:bg-accent/20 flex items-center justify-center shadow-light-glow-md light:shadow-light-glow-md dark:shadow-glow-md">
-                        <span className="text-4xl font-bold text-coral light:text-coral dark:text-accent">AS</span>
-                      </div>
-                      <p className="text-ink-lightest light:text-ink-lightest dark:text-slate-lightest text-sm font-mono font-semibold">
-                        Profile Photo
-                      </p>
-                      <p className="text-ink light:text-ink dark:text-slate text-xs mt-2">
-                        Replace with your image
-                      </p>
-                    </div>
-                  </div>
+                  <img
+                    src="/portfolio-image.jpg"
+                    alt="Aryan Surin - Full Stack Developer"
+                    className="w-full h-full object-cover"
+                  />
                   
                   {/* Overlay on hover */}
                   <div className="absolute inset-0 bg-coral/ light:bg-coral/ dark:bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

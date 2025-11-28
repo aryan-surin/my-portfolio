@@ -25,7 +25,7 @@ const Projects = () => {
     {
       title: 'Nishkalanka Mata English School',
       description: 'Comprehensive school management website with an advanced online admission portal system integrated with Supabase backend. Features dynamic announcements, news management, events calendar, gallery system, and secure document submission workflow. Built from scratch with modern SEO optimization and mobile-first responsive design serving 500+ students and parents.',
-      image: '/project1.jpg', // Replace with actual screenshot
+      image: '/projects/project1.jpg',
       tech: ['Nuxt.js', 'Vue.js', 'Supabase', 'Tailwind CSS', 'TypeScript'],
       liveUrl: 'https://nishkalankamataenglish.school/',
       githubUrl: null,
@@ -34,7 +34,7 @@ const Projects = () => {
     {
       title: 'Thapa Construction',
       description: 'Full-featured construction company website with custom admin panel for project portfolio management connected to Supabase. Includes dynamic project showcase with image galleries, service pages, client testimonials, contact forms with automated email notifications, and SEO-optimized content. The admin panel enables real-time content updates without developer intervention.',
-      image: '/project2.jpg', // Replace with actual screenshot
+      image: '/projects/project2.jpg',
       tech: ['Nuxt.js', 'Vue.js', 'Supabase', 'SCSS', 'Pinia'],
       liveUrl: 'https://www.thapaconstruction.com/',
       githubUrl: null,
@@ -43,7 +43,7 @@ const Projects = () => {
     {
       title: 'Saint Teresa\'s Girls\' High School',
       description: 'Modern, elegant school website for a prestigious Darjeeling institution featuring responsive design, admission information system, photo gallery with lightbox functionality, faculty profiles, and interactive contact forms. Implemented with performance optimization achieving 95+ Lighthouse scores and cross-browser compatibility ensuring seamless experience across all devices.',
-      image: '/project3.jpg', // Replace with actual screenshot
+      image: '/projects/project3.jpg',
       tech: ['Nuxt.js', 'Vue.js', 'Tailwind CSS', 'SCSS'],
       liveUrl: 'https://saintteresaschooldarj.co.in/',
       githubUrl: null,
@@ -52,7 +52,7 @@ const Projects = () => {
     {
       title: 'Revival Gel Church',
       description: 'Beautiful, spiritually-focused church website featuring sermon archives, event management system, Bible study resources with custom highlighting guide, community gallery, prayer request forms, and donation integration. Built with accessibility-first approach (WCAG 2.1 compliant) and optimized for fast loading on all network conditions to serve the global faith community.',
-      image: '/project4.jpg', // Replace with actual screenshot
+      image: '/projects/project4.jpg',
       tech: ['Nuxt.js', 'Vue.js', 'Tailwind CSS', 'TypeScript'],
       liveUrl: 'https://www.revivalgelchurch.com/',
       githubUrl: null,
@@ -61,7 +61,7 @@ const Projects = () => {
     {
       title: 'Personal Portfolio',
       description: 'Modern, interactive developer portfolio built with React showcasing professional experience, projects, and technical skills. Features smooth GSAP animations, dark/light theme toggle with system preference detection, responsive design with mobile-first approach, and optimized performance with code splitting. Demonstrates mastery of modern React ecosystem and UI/UX best practices.',
-      image: '/project5.jpg', // Replace with actual screenshot
+      image: '/projects/project5.jpg',
       tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'GSAP'],
       liveUrl: 'https://aryansurin.vercel.app/',
       githubUrl: null,
@@ -111,17 +111,13 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="block relative rounded-lg overflow-hidden"
                   >
-                    {/* Image Placeholder */}
-                    <div className="relative aspect-video bg-cream-elevated light:bg-cream-elevated dark:bg-navy-lighter border border-coral/ light:border-coral/ dark:border-accent/20 flex items-center justify-center shadow-light-card light:shadow-light-card dark:shadow-card group-hover:shadow-light-card-hover light:shadow-light-card-hover dark:shadow-card-hover transition-all duration-300">
-                      <div className="text-center p-8">
-                        <HiCode className="w-16 h-16 text-coral light:text-coral dark:text-accent/50 mx-auto mb-4" />
-                        <p className="text-ink-lightest light:text-ink-lightest dark:text-slate-lightest font-mono text-sm">
-                          Project Screenshot
-                        </p>
-                        <p className="text-ink light:text-ink dark:text-slate text-xs mt-2">
-                          Replace with actual project image
-                        </p>
-                      </div>
+                    {/* Project Image */}
+                    <div className="relative aspect-video bg-cream-elevated light:bg-cream-elevated dark:bg-navy-lighter border border-coral/ light:border-coral/ dark:border-accent/20 shadow-light-card light:shadow-light-card dark:shadow-card group-hover:shadow-light-card-hover light:shadow-light-card-hover dark:shadow-card-hover transition-all duration-300 overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                      />
                     </div>
                     
                     {/* Overlay */}
