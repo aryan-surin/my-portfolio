@@ -58,7 +58,7 @@ function App() {
               <About />
               <Experience />
               <Projects />
-              <Testimonials />
+              {/* <Testimonials /> */} {/* TODO: temporarily disabled */}
               <Contact />
             </main>
             
