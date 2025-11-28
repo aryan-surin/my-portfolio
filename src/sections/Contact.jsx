@@ -93,11 +93,7 @@ const Contact = () => {
 
   /**
    * Handle form submission
-   * 
-   * TODO: Replace with your EmailJS credentials
-   * SERVICE_ID: Your EmailJS service ID
-   * TEMPLATE_ID: Your EmailJS template ID
-   * PUBLIC_KEY: Your EmailJS public key
+   * Sends email using EmailJS
    */
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -109,15 +105,23 @@ const Contact = () => {
     setFormStatus({ loading: true, success: false, error: false, message: '' });
 
     try {
-      // TODO: Replace these with your actual EmailJS credentials
-      const SERVICE_ID = 'your_service_id';
-      const TEMPLATE_ID = 'your_template_id';
-      const PUBLIC_KEY = 'your_public_key';
+      // EmailJS credentials
+      const SERVICE_ID = 'service_gxhdktj';
+      const TEMPLATE_ID = 'template_5fntwga';
+      const PUBLIC_KEY = '8CfFGrYA2Of8bEM32';
 
-      await emailjs.sendForm(
+      // Prepare template parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      };
+
+      await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
-        formRef.current,
+        templateParams,
         PUBLIC_KEY
       );
 
@@ -146,7 +150,7 @@ const Contact = () => {
         loading: false,
         success: false,
         error: true,
-        message: 'Oops! Something went wrong. Please try again or email me directly.',
+        message: 'Oops! Something went wrong. Please try again or email me directly at aryansurin21@gmail.com',
       });
 
       // Clear error message after 5 seconds
