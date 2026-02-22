@@ -67,6 +67,24 @@ const Projects = () => {
       githubUrl: null,
       featured: true,
     },
+    {
+      title: 'Ishwara Enterprises',
+      description: ' Demo Modern, interactive developer portfolio built with React showcasing professional experience, projects, and technical skills. Features smooth GSAP animations, dark/light theme toggle with system preference detection, responsive design with mobile-first approach, and optimized performance with code splitting. Demonstrates mastery of modern React ecosystem and UI/UX best practices.',
+      image: '/projects/project6.png',
+      tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'GSAP'],
+      liveUrl: 'https://ishwara-enterprise.vercel.app/',
+      githubUrl: null,
+      featured: true,
+    },
+    {
+      title: 'Dexterous Pharmaceuticals',
+      description: ' Demo of a pharmaceutical company website built with React showcasing professional experience, projects, and technical skills. Features smooth GSAP animations, dark/light theme toggle with system preference detection, responsive design with mobile-first approach, and optimized performance with code splitting. Demonstrates mastery of modern React ecosystem and UI/UX best practices.',
+      image: '/projects/project7.png',
+      tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'GSAP'],
+      liveUrl: 'https://dexterous.vercel.app/',
+      githubUrl: null,
+      featured: true,
+    },
   ];
 
   return (
